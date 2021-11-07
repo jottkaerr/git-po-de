@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
 "POT-Creation-Date: 2021-11-04 08:34+0800\n"
-"PO-Revision-Date: 2021-05-23 18:32+0200\n"
+"PO-Revision-Date: 2021-11-07 19:48+0100\n"
 "Last-Translator: Matthias Rüster <matthias.ruester@gmail.com>\n"
 "Language-Team: Matthias Rüster <matthias.ruester@gmail.com>\n"
 "Language: de\n"
@@ -843,6 +843,9 @@ msgid ""
 "outside of your sparse-checkout definition, so will not be\n"
 "updated in the index:\n"
 msgstr ""
+"Die folgenden Pfade und/oder Pfadspezifikationen entsprachen keinem Pfad,\n"
+"der außerhalb Ihrer partiellen Checkout-Definition existierte, weshalb\n"
+"diese nicht im Index aktualisiert werden:\n"
 
 #: advice.c:234
 msgid ""
@@ -850,6 +853,10 @@ msgid ""
 "* Use the --sparse option.\n"
 "* Disable or modify the sparsity rules."
 msgstr ""
+"Wenn Sie beabsichtigen, solche Einträge zu aktualisieren, versuchen Sie es\n"
+"mit einem der folgenden Schritte:\n"
+"* Verwenden Sie die Option --sparse.\n"
+"* Deaktivieren oder ändern Sie die Regeln für partielle Checkouts."
 
 #: advice.c:242
 #, c-format
@@ -4389,42 +4396,50 @@ msgid ""
 "gpg.ssh.allowedSignersFile needs to be configured and exist for ssh "
 "signature verification"
 msgstr ""
+"gpg.ssh.allowedSignersFile muss konfiguriert sein und für die Überprüfung "
+"der SSH-Signatur vorhanden sein"
 
 #: gpg-interface.c:469
 msgid ""
 "ssh-keygen -Y find-principals/verify is needed for ssh signature "
 "verification (available in openssh version 8.2p1+)"
 msgstr ""
+"ssh-keygen -Y find-principals/verify wird für die Verifizierung der SSH-"
+"Signatur benötigt (verfügbar in openssh Version 8.2p1+)"
 
 #: gpg-interface.c:523
 #, c-format
 msgid "ssh signing revocation file configured but not found: %s"
-msgstr ""
+msgstr "SSH-Signatursperrdatei konfiguriert, aber nicht gefunden: %s"
 
 #: gpg-interface.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "bad/incompatible signature '%s'"
-msgstr "%s ist inkompatibel mit %s."
+msgstr "fehlerhafte/inkompatible Signatur '%s'"
 
 #: gpg-interface.c:735 gpg-interface.c:740
-#, fuzzy, c-format
+#, c-format
 msgid "failed to get the ssh fingerprint for key '%s'"
-msgstr "Fehler beim Lesen des Standard-Remote-Repositories für Submodul '%s'"
+msgstr "konnte SSH-Fingerabdruck für Schlüssel '%s' nicht bekommen"
 
 #: gpg-interface.c:762
 msgid ""
 "either user.signingkey or gpg.ssh.defaultKeyCommand needs to be configured"
 msgstr ""
+"entweder user.signingkey oder gpg.ssh.defaultKeyCommand muss konfiguriert "
+"sein"
 
 #: gpg-interface.c:780
 #, c-format
 msgid "gpg.ssh.defaultKeyCommand succeeded but returned no keys: %s %s"
 msgstr ""
+"gpg.ssh.defaultKeyCommand war erfolgreich, gab aber keine Schlüssel zurück: "
+"%s %s"
 
 #: gpg-interface.c:786
 #, c-format
 msgid "gpg.ssh.defaultKeyCommand failed: %s %s"
-msgstr ""
+msgstr "gpg.ssh.defaultKeyCommand fehlgeschlagen: %s %s"
 
 #: gpg-interface.c:874
 msgid "gpg failed to sign the data"
@@ -4432,28 +4447,30 @@ msgstr "gpg beim Signieren der Daten fehlgeschlagen"
 
 #: gpg-interface.c:895
 msgid "user.signingkey needs to be set for ssh signing"
-msgstr ""
+msgstr "user.signingkey muss für die SSH-Signatur festgelegt werden"
 
 #: gpg-interface.c:906
-#, fuzzy, c-format
+#, c-format
 msgid "failed writing ssh signing key to '%s'"
-msgstr "Fehler beim Schreiben der losgelösten Signatur nach '%s'"
+msgstr "Fehler beim Schreiben des SSH-Signaturschlüssels nach '%s'"
 
 #: gpg-interface.c:924
-#, fuzzy, c-format
+#, c-format
 msgid "failed writing ssh signing key buffer to '%s'"
-msgstr "Fehler beim Schreiben der losgelösten Signatur nach '%s'"
+msgstr "Fehler beim Schreiben des SSH-Signaturschlüsselpuffers nach '%s'"
 
 #: gpg-interface.c:942
 msgid ""
 "ssh-keygen -Y sign is needed for ssh signing (available in openssh version "
 "8.2p1+)"
 msgstr ""
+"\"ssh-keygen -Y sign\" wird für die SSH-Signatur benötigt (verfügbar in "
+"openssh Version 8.2p1+)"
 
 #: gpg-interface.c:954
-#, fuzzy, c-format
+#, c-format
 msgid "failed reading ssh signing data buffer from '%s'"
-msgstr "Fehler beim Schreiben der losgelösten Signatur nach '%s'"
+msgstr "Fehler beim Lesen des SSH-Signaturdatenpuffers von '%s'"
 
 #: graph.c:98
 #, c-format
@@ -4604,7 +4621,7 @@ msgstr "Setze fort unter der Annahme, dass Sie '%s' meinten."
 #: help.c:646
 #, c-format
 msgid "Run '%s' instead? (y/N)"
-msgstr ""
+msgstr "Führen Sie stattdessen '%s' aus? (y/N)"
 
 #: help.c:654
 #, c-format
@@ -4819,9 +4836,9 @@ msgid "invalid value '%s' for lsrefs.unborn"
 msgstr "ungültiger Wert '%s' für lsrefs.unborn"
 
 #: ls-refs.c:174
-#, fuzzy, c-format
+#, c-format
 msgid "unexpected line: '%s'"
-msgstr "unerwartetes wanted-ref: '%s'"
+msgstr "unerwartete Zeile: '%s'"
 
 #: ls-refs.c:178
 msgid "expected flush after ls-refs arguments"
@@ -5490,14 +5507,14 @@ msgid "cannot store reverse index file"
 msgstr "kann Reverse-Index-Datei nicht speichern"
 
 #: midx.c:990
-#, fuzzy, c-format
+#, c-format
 msgid "could not parse line: %s"
-msgstr "konnte %s nicht parsen"
+msgstr "Zeile konnte nicht analysiert werden: %s"
 
 #: midx.c:992
-#, fuzzy, c-format
+#, c-format
 msgid "malformed line: %s"
-msgstr "Fehlerhafte Eingabezeile: '%s'."
+msgstr "fehlerhafte Zeile: %s"
 
 #: midx.c:1159
 msgid "ignoring existing multi-pack-index; checksum mismatch"
@@ -5505,12 +5522,11 @@ msgstr ""
 "ignoriere existierenden multi-pack-index; Prüfsumme stimmt nicht überein"
 
 #: midx.c:1184
-#, fuzzy
 msgid "could not load pack"
-msgstr "Konnte Paket '%s' nicht finden"
+msgstr "Paket konnte nicht geladen werden"
 
 #: midx.c:1190
-#, fuzzy, c-format
+#, c-format
 msgid "could not open index for %s"
 msgstr "konnte Index für %s nicht öffnen"
 
@@ -5524,9 +5540,9 @@ msgid "unknown preferred pack: '%s'"
 msgstr "unbekanntes bevorzugtes Paket: '%s'"
 
 #: midx.c:1289
-#, fuzzy, c-format
+#, c-format
 msgid "cannot select preferred pack %s with no objects"
-msgstr "kann Pack-Dateien in precious-objects Repository nicht löschen"
+msgstr "bevorzugtes Paket %s ohne Objekte kann nicht ausgewählt werden"
 
 #: midx.c:1321
 #, c-format
@@ -5543,14 +5559,12 @@ msgid "no pack files to index."
 msgstr "keine Packdateien zum Indizieren."
 
 #: midx.c:1417
-#, fuzzy
 msgid "could not write multi-pack bitmap"
-msgstr "Konnte Commit-Vorlage nicht schreiben"
+msgstr "Multipack-Bitmap konnte nicht geschrieben werden"
 
 #: midx.c:1427
-#, fuzzy
 msgid "could not write multi-pack-index"
-msgstr "Fehler beim Schreiben des multi-pack-index"
+msgstr "Multi-Pack-Index konnte nicht geschrieben werden"
 
 #: midx.c:1486 builtin/clean.c:37
 #, c-format
@@ -5809,7 +5823,7 @@ msgstr "Konnte %s Kopfbereich nicht entpacken."
 #: object-file.c:1434
 #, c-format
 msgid "header for %s too long, exceeds %d bytes"
-msgstr ""
+msgstr "Header für %s zu lang, überschreitet %d Bytes"
 
 #: object-file.c:1664
 #, c-format
@@ -6085,13 +6099,12 @@ msgid "hash mismatch %s"
 msgstr "Hash stimmt nicht mit %s überein."
 
 #: pack-bitmap.c:348
-#, fuzzy
 msgid "multi-pack bitmap is missing required reverse index"
-msgstr "multi-pack-index fehlt erforderlicher Objekt offset Chunk"
+msgstr "Multipack-Bitmap fehlt erforderlicher Reverse-Index"
 
 #: pack-bitmap.c:424
 msgid "load_reverse_index: could not open pack"
-msgstr ""
+msgstr "load_reverse_index: Paket konnte nicht geöffnet werden"
 
 #: pack-bitmap.c:1064 pack-bitmap.c:1070 builtin/pack-objects.c:2424
 #, c-format
@@ -6099,9 +6112,9 @@ msgid "unable to get size of %s"
 msgstr "Konnte Größe von %s nicht bestimmen."
 
 #: pack-bitmap.c:1916
-#, fuzzy, c-format
+#, c-format
 msgid "could not find %s in pack %s at offset %<PRIuMAX>"
-msgstr "Konnte Paket '%s' nicht finden"
+msgstr "konnte %s nicht in Paket %s bei Offset %<PRIuMAX> finden"
 
 #: pack-bitmap.c:1952 builtin/rev-list.c:92
 #, c-format
@@ -6293,7 +6306,7 @@ msgstr "      oder: %s"
 #: parse-options.c:969
 #, c-format
 msgid "%*s%s"
-msgstr ""
+msgstr "%*s%s"
 
 #: parse-options.c:992
 #, c-format
@@ -6890,7 +6903,7 @@ msgstr ""
 #: rebase.c:29
 #, c-format
 msgid "%s: 'preserve' superseded by 'merges'"
-msgstr ""
+msgstr "%s: 'preserve' wurde durch 'merges' ersetzt"
 
 #: ref-filter.c:42 wt-status.c:2036
 msgid "gone"
@@ -6982,9 +6995,9 @@ msgid "unrecognized %%(contents) argument: %s"
 msgstr "nicht erkanntes %%(contents) Argument: %s"
 
 #: ref-filter.c:443
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized %%(raw) argument: %s"
-msgstr "nicht erkanntes %%(%s) Argument: %s"
+msgstr "nicht erkanntes %%(raw) Argument: %s"
 
 #: ref-filter.c:458
 #, c-format
@@ -7032,9 +7045,9 @@ msgid "unrecognized %%(if) argument: %s"
 msgstr "nicht erkanntes %%(if) Argument: %s"
 
 #: ref-filter.c:568
-#, fuzzy, c-format
+#, c-format
 msgid "%%(rest) does not take arguments"
-msgstr "%%(body) akzeptiert keine Argumente"
+msgstr "%%(rest) akzeptiert keine Argumente"
 
 #: ref-filter.c:680
 #, c-format
@@ -7101,12 +7114,12 @@ msgstr "Fehlerhafter Formatierungsstring %s"
 #: ref-filter.c:1033
 #, c-format
 msgid "this command reject atom %%(%.*s)"
-msgstr ""
+msgstr "dieser Befehl lehnt Atom ab %%(%.*s)"
 
 #: ref-filter.c:1040
-#, fuzzy, c-format
+#, c-format
 msgid "--format=%.*s cannot be used with --python, --shell, --tcl"
-msgstr "--object-format kann nicht mit --stdin verwendet werden"
+msgstr "--format=%.*s kann nicht mit --python, --shell, --tcl verwendet werden"
 
 #: ref-filter.c:1706
 #, c-format
@@ -7689,18 +7702,16 @@ msgid "failed to find tree of %s"
 msgstr "Fehler beim Finden des \"Tree\"-Objektes von %s."
 
 #: revision.c:2259
-#, fuzzy
 msgid "--unsorted-input is incompatible with --no-walk"
-msgstr "--dir-diff kann nicht mit --no-index verwendet werden"
+msgstr "--unsorted-input ist nicht kompatibel mit --no-walk"
 
 #: revision.c:2346
 msgid "--unpacked=<packfile> no longer supported"
 msgstr "--unpacked=<Pack-Datei> wird nicht länger unterstützt"
 
 #: revision.c:2655 revision.c:2659
-#, fuzzy
 msgid "--no-walk is incompatible with --unsorted-input"
-msgstr "--dir-diff kann nicht mit --no-index verwendet werden"
+msgstr "--no-walk ist nicht kompatibel mit --unsorted-input"
 
 #: revision.c:2690
 msgid "your current branch appears to be broken"
@@ -7814,7 +7825,6 @@ msgstr ""
 "mit 'git add <Pfade>' oder 'git rm <Pfade>'"
 
 #: sequencer.c:423
-#, fuzzy
 msgid ""
 "After resolving the conflicts, mark them with\n"
 "\"git add/rm <pathspec>\", then run\n"
@@ -7824,15 +7834,14 @@ msgid ""
 "run \"git cherry-pick --abort\"."
 msgstr ""
 "Lösen Sie alle Konflikte manuell auf, markieren Sie diese mit\n"
-"\"git add/rm <konfliktbehaftete_Dateien>\" und führen Sie dann\n"
-"\"git rebase --continue\" aus.\n"
-"Sie können auch stattdessen diesen Commit auslassen, indem\n"
-"Sie \"git rebase --skip\" ausführen.\n"
-"Um abzubrechen und zurück zum Zustand vor \"git rebase\" zu gelangen,\n"
-"führen Sie \"git rebase --abort\" aus."
+"\"git add/rm <Pfadspezifikation>\" und führen Sie dann\n"
+"\"git cherry-pick --continue\" aus.\n"
+"Sie können stattdessen auch diesen Commit auslassen, indem\n"
+"Sie \"git cherry-pick --skip\" ausführen.\n"
+"Um abzubrechen und zurück zum Zustand vor \"git cherry-pick\" zu\n"
+"gelangen, führen Sie \"git cherry-pick --abort\" aus."
 
 #: sequencer.c:430
-#, fuzzy
 msgid ""
 "After resolving the conflicts, mark them with\n"
 "\"git add/rm <pathspec>\", then run\n"
@@ -7842,12 +7851,12 @@ msgid ""
 "run \"git revert --abort\"."
 msgstr ""
 "Lösen Sie alle Konflikte manuell auf, markieren Sie diese mit\n"
-"\"git add/rm <konfliktbehaftete_Dateien>\" und führen Sie dann\n"
-"\"git rebase --continue\" aus.\n"
-"Sie können auch stattdessen diesen Commit auslassen, indem\n"
-"Sie \"git rebase --skip\" ausführen.\n"
-"Um abzubrechen und zurück zum Zustand vor \"git rebase\" zu gelangen,\n"
-"führen Sie \"git rebase --abort\" aus."
+"\"git add/rm <Pfadspezifikation>\" und führen Sie dann\n"
+"\"git revert --continue\" aus.\n"
+"Sie können stattdessen auch diesen Commit auslassen, indem\n"
+"Sie \"git revert --skip\" ausführen.\n"
+"Um abzubrechen und zurück zum Zustand vor \"git revert\" zu gelangen,\n"
+"führen Sie \"git revert --abort\" aus."
 
 #: sequencer.c:448 sequencer.c:3290
 #, c-format
@@ -8710,13 +8719,14 @@ msgid "can't revert as initial commit"
 msgstr "Kann nicht als allerersten Commit einen Revert ausführen."
 
 #: sequencer.c:5192 sequencer.c:5421
-#, fuzzy, c-format
+#, c-format
 msgid "skipped previously applied commit %s"
-msgstr "vorherigen Commit ändern"
+msgstr "zuvor angewendeten Commit %s übersprungen"
 
 #: sequencer.c:5262 sequencer.c:5437
 msgid "use --reapply-cherry-picks to include skipped commits"
 msgstr ""
+"verwenden Sie --reapply-cherry-picks, um übersprungene Commits einzubeziehen"
 
 #: sequencer.c:5408
 msgid "make_script: unhandled options"
@@ -9967,7 +9977,7 @@ msgid "gitdir file points to non-existent location"
 msgstr "gitdir-Datei verweist auf nicht existierenden Ort"
 
 #: wrapper.c:151
-#, fuzzy, c-format
+#, c-format
 msgid "could not setenv '%s'"
 msgstr "konnte '%s' nicht setzen"
 
@@ -10712,9 +10722,10 @@ msgid "check if - even missing - files are ignored in dry run"
 msgstr "prüfen ob - auch fehlende - Dateien im Probelauf ignoriert werden"
 
 #: builtin/add.c:389 builtin/mv.c:128 builtin/rm.c:251
-#, fuzzy
 msgid "allow updating entries outside of the sparse-checkout cone"
-msgstr "initialisiere den partiellen Checkout im Cone-Modus"
+msgstr ""
+"erlaube das Aktualisieren von Einträgen außerhalb des partiellen Checkouts "
+"im Cone-Modus"
 
 #: builtin/add.c:391 builtin/update-index.c:1004
 msgid "override the executable bit of the listed files"
@@ -11309,14 +11320,12 @@ msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
 msgstr "git bisect--helper --bisect-skip [(<Commit>|<Bereich>)...]"
 
 #: builtin/bisect--helper.c:33
-#, fuzzy
 msgid "git bisect--helper --bisect-visualize"
-msgstr "git bisect--helper --bisect-next"
+msgstr "git bisect--helper --bisect-visualize"
 
 #: builtin/bisect--helper.c:34
-#, fuzzy
 msgid "git bisect--helper --bisect-run <cmd>..."
-msgstr "git bisect--helper --bisect-reset [<Commit>]"
+msgstr "git bisect--helper --bisect-run <Programm>"
 
 #: builtin/bisect--helper.c:109
 #, c-format
@@ -11329,9 +11338,9 @@ msgid "could not write to file '%s'"
 msgstr "konnte nicht in Datei '%s' schreiben"
 
 #: builtin/bisect--helper.c:154
-#, fuzzy, c-format
+#, c-format
 msgid "cannot open file '%s' for reading"
-msgstr "kann Datei '%s' nicht für die Wiederholung lesen"
+msgstr "Datei '%s' kann nicht zum Lesen geöffnet werden"
 
 #: builtin/bisect--helper.c:170
 #, c-format
@@ -11543,21 +11552,19 @@ msgid "bisect run failed: no command provided."
 msgstr "'bisect run' fehlgeschlagen: kein Befehl angegeben."
 
 #: builtin/bisect--helper.c:1116
-#, fuzzy, c-format
+#, c-format
 msgid "running %s\n"
-msgstr "entferne veraltete Branches von %s"
+msgstr "Ausführen von %s\n"
 
 #: builtin/bisect--helper.c:1120
-#, fuzzy, c-format
+#, c-format
 msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
-msgstr ""
-"'bisect run' fehlgeschlagen:\n"
-"Exit-Code $res von '$command' ist < 0 oder >= 128"
+msgstr "'bisect run' fehlgeschlagen: Exit-Code %d von '%s' ist < 0 oder >= 128"
 
 #: builtin/bisect--helper.c:1136
-#, fuzzy, c-format
+#, c-format
 msgid "cannot open file '%s' for writing"
-msgstr "Konnte '%s' nicht zum Schreiben öffnen."
+msgstr "Datei '%s' kann nicht zum Schreiben geöffnet werden"
 
 #: builtin/bisect--helper.c:1152
 msgid "bisect run cannot continue any more"
@@ -11569,18 +11576,18 @@ msgid "bisect run success"
 msgstr "'bisect run' erfolgreich ausgeführt"
 
 #: builtin/bisect--helper.c:1157
-#, fuzzy, c-format
+#, c-format
 msgid "bisect found first bad commit"
-msgstr "binäre Suche nur mit einem %s Commit"
+msgstr "binäre Suche fand ersten schlechten Commit"
 
 #: builtin/bisect--helper.c:1160
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error "
 "code %d"
 msgstr ""
-"'bisect run' fehlgeschlagen:\n"
-"'bisect-state $state' wurde mit Fehlerwert $res beendet"
+"'bisect run' fehlgeschlagen: 'git bisect--helper --bisect-state %s' mit "
+"Fehlercode %d beendet"
 
 #: builtin/bisect--helper.c:1192
 msgid "reset the bisection state"
@@ -11619,14 +11626,12 @@ msgid "skip some commits for checkout"
 msgstr "einige Commits für das Auschecken überspringen"
 
 #: builtin/bisect--helper.c:1210
-#, fuzzy
 msgid "visualize the bisection"
-msgstr "Sitzung für binäre Suche starten"
+msgstr "binäre Suche visualisieren"
 
 #: builtin/bisect--helper.c:1212
-#, fuzzy
 msgid "use <cmd>... to automatically bisect."
-msgstr "nicht automatisch committen"
+msgstr "verwende <Programm>... für die automatische binäre Suche."
 
 #: builtin/bisect--helper.c:1214
 msgid "no log for BISECT_WRITE"
@@ -12395,9 +12400,8 @@ msgid "Need a repository to unbundle."
 msgstr "Zum Entpacken wird ein Repository benötigt."
 
 #: builtin/bundle.c:185
-#, fuzzy
 msgid "Unbundling objects"
-msgstr "Indiziere Objekte"
+msgstr "Entpacken von Objekten"
 
 #: builtin/bundle.c:219 builtin/remote.c:1733
 #, c-format
@@ -15184,13 +15188,12 @@ msgid "could not read object %s for symlink %s"
 msgstr "Konnte Objekt '%s' für symbolische Verknüpfung '%s' nicht lesen."
 
 #: builtin/difftool.c:427
-#, fuzzy
 msgid ""
 "combined diff formats ('-c' and '--cc') are not supported in\n"
 "directory diff mode ('-d' and '--dir-diff')."
 msgstr ""
-"Kombinierte Diff-Formate('-c' und '--cc') werden im Verzeichnis-\n"
-"Diff-Modus('-d' und '--dir-diff') nicht unterstützt."
+"kombinierte Diff-Formate ('-c' und '--cc') werden im Verzeichnis-\n"
+"Diff-Modus ('-d' und '--dir-diff') nicht unterstützt."
 
 #: builtin/difftool.c:632
 #, c-format
@@ -15245,14 +15248,12 @@ msgstr ""
 "eine Liste mit Diff-Tools darstellen, die mit `--tool` benutzt werden können"
 
 #: builtin/difftool.c:712
-#, fuzzy
 msgid ""
 "make 'git-difftool' exit when an invoked diff tool returns a non-zero exit "
 "code"
 msgstr ""
-"'git-difftool' beenden, wenn das aufgerufene Diff-Tool mit einem "
-"Rückkehrwert\n"
-"verschieden 0 ausgeführt wurde"
+"'git-difftool' beenden, wenn das aufgerufene Diff-Tool mit einem Exit-Code "
+"ungleich 0 ausgeführt wurde"
 
 #: builtin/difftool.c:715
 msgid "specify a custom command for viewing diffs"
@@ -15763,9 +15764,9 @@ msgid "Option \"%s\" is ignored for %s\n"
 msgstr "Option \"%s\" wird ignoriert für %s\n"
 
 #: builtin/fetch.c:1447
-#, fuzzy, c-format
+#, c-format
 msgid "the object %s does not exist"
-msgstr "Pfad '%s' existiert nicht"
+msgstr "das Objekt %s ist nicht vorhanden"
 
 #: builtin/fetch.c:1633
 msgid "multiple branches detected, incompatible with --set-upstream"
@@ -16108,9 +16109,9 @@ msgid "notice: No default references"
 msgstr "Notiz: Keine Standardreferenzen"
 
 #: builtin/fsck.c:621
-#, fuzzy, c-format
+#, c-format
 msgid "%s: hash-path mismatch, found at: %s"
-msgstr "Hash stimmt nicht mit %s überein."
+msgstr "%s: Hash-Pfad stimmt nicht überein, gefunden bei: %s"
 
 #: builtin/fsck.c:624
 #, c-format
@@ -16118,9 +16119,9 @@ msgid "%s: object corrupt or missing: %s"
 msgstr "%s: Objekt fehlerhaft oder nicht vorhanden: %s"
 
 #: builtin/fsck.c:628
-#, fuzzy, c-format
+#, c-format
 msgid "%s: object is of unknown type '%s': %s"
-msgstr "Objekt %s hat eine unbekannte Typ-Identifikation %d"
+msgstr "%s: Objekt hat einen unbekannten Typ '%s': %s"
 
 #: builtin/fsck.c:644
 #, c-format
@@ -16269,7 +16270,7 @@ msgid "cannot read '%s'"
 msgstr "kann '%s' nicht lesen"
 
 #: builtin/gc.c:503
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The last gc run reported the following. Please correct the root cause\n"
 "and remove %s\n"
@@ -16501,14 +16502,12 @@ msgid "'crontab' died"
 msgstr "'crontab' abgebrochen"
 
 #: builtin/gc.c:2174
-#, fuzzy
 msgid "failed to start systemctl"
-msgstr "Fehler beim Starten von schtasks"
+msgstr "Fehler beim Starten von systemctl"
 
 #: builtin/gc.c:2184
-#, fuzzy
 msgid "failed to run systemctl"
-msgstr "'%s' konnte nicht ausgeführt werden"
+msgstr "Fehler beim Ausführen von systemctl"
 
 #: builtin/gc.c:2193 builtin/gc.c:2198 builtin/worktree.c:62
 #: builtin/worktree.c:945
@@ -16517,18 +16516,18 @@ msgid "failed to delete '%s'"
 msgstr "Fehler beim Löschen von '%s'"
 
 #: builtin/gc.c:2378
-#, fuzzy, c-format
+#, c-format
 msgid "unrecognized --scheduler argument '%s'"
-msgstr "nicht erkanntes --schedule Argument '%s'"
+msgstr "nicht erkanntes --scheduler Argument '%s'"
 
 #: builtin/gc.c:2403
 msgid "neither systemd timers nor crontab are available"
-msgstr ""
+msgstr "weder Timer von systemd, noch crontab ist verfügbar"
 
 #: builtin/gc.c:2418
-#, fuzzy, c-format
+#, c-format
 msgid "%s scheduler is not available"
-msgstr "%s ist nicht verfügbar."
+msgstr "%s Scheduler ist nicht verfügbar"
 
 #: builtin/gc.c:2432
 msgid "another process is scheduling background maintenance"
@@ -16536,15 +16535,15 @@ msgstr "ein anderer Prozess plant die Hintergrundwartung"
 
 #: builtin/gc.c:2454
 msgid "git maintenance start [--scheduler=<scheduler>]"
-msgstr ""
+msgstr "git maintenance start [--scheduler=<Scheduler>]"
 
 #: builtin/gc.c:2463
 msgid "scheduler"
-msgstr ""
+msgstr "Scheduler"
 
 #: builtin/gc.c:2464
 msgid "scheduler to trigger git maintenance run"
-msgstr ""
+msgstr "Scheduler, um \"git maintenance run\" auzuführen"
 
 #: builtin/gc.c:2478
 msgid "failed to add repo to global config"
@@ -16912,19 +16911,20 @@ msgid "print all configuration variable names"
 msgstr "alle Namen der Konfigurationsvariablen ausgeben"
 
 #: builtin/help.c:78
-#, fuzzy
 msgid ""
 "git help [-a|--all] [--[no-]verbose]]\n"
 "         [[-i|--info] [-m|--man] [-w|--web]] [<command>]"
-msgstr "git help [--all] [--guides] [--man | --web | --info] [<Befehl>]"
+msgstr ""
+"git help [-a|--all] [--[no-]verbose]]\n"
+"         [[-i|--info] [-m|--man] [-w|--web]] [<Befehl>]"
 
 #: builtin/help.c:80
 msgid "git help [-g|--guides]"
-msgstr ""
+msgstr "git help [-g|--guides]"
 
 #: builtin/help.c:81
 msgid "git help [-c|--config]"
-msgstr ""
+msgstr "git help [-c|--config]"
 
 #: builtin/help.c:196
 #, c-format
@@ -16991,9 +16991,8 @@ msgid "bad alias.%s string: %s"
 msgstr "Ungültiger alias.%s String: %s"
 
 #: builtin/help.c:581
-#, fuzzy
 msgid "this option doesn't take any other arguments"
-msgstr "fetch --all akzeptiert kein Repository als Argument"
+msgstr "diese Option akzeptiert keine anderen Argumente"
 
 #: builtin/help.c:602 builtin/help.c:629
 #, c-format
@@ -17216,9 +17215,9 @@ msgid "cannot close written %s file '%s'"
 msgstr "Kann eben geschriebene %s Datei '%s' nicht schließen."
 
 #: builtin/index-pack.c:1489
-#, fuzzy, c-format
+#, c-format
 msgid "unable to rename temporary '*.%s' file to '%s'"
-msgstr "konnte temporäre Datei nicht zu %s umbenennen"
+msgstr "konnte temporäre Datei '*.%s' nicht zu '%s' umbenennen"
 
 #: builtin/index-pack.c:1514
 msgid "error while closing pack file"
@@ -17933,9 +17932,8 @@ msgid "git ls-files [<options>] [<file>...]"
 msgstr "git ls-files [<Optionen>] [<Datei>...]"
 
 #: builtin/ls-files.c:615
-#, fuzzy
 msgid "separate paths with the NUL character"
-msgstr "Pfade sind getrennt durch NUL Zeichen"
+msgstr "Pfade durch NUL-Zeichen trennen"
 
 #: builtin/ls-files.c:617
 msgid "identify the file status with tags"
@@ -18005,9 +18003,8 @@ msgid "skip files matching pattern"
 msgstr "Dateien auslassen, die einem Muster entsprechen"
 
 #: builtin/ls-files.c:652
-#, fuzzy
 msgid "read exclude patterns from <file>"
-msgstr "Muster von einer Datei lesen"
+msgstr "Ausschlussmuster aus <Datei> lesen"
 
 #: builtin/ls-files.c:655
 msgid "read additional per-directory exclude patterns in <file>"
@@ -18048,15 +18045,14 @@ msgid "suppress duplicate entries"
 msgstr "doppelte Einträge unterdrücken"
 
 #: builtin/ls-remote.c:9
-#, fuzzy
 msgid ""
 "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
 "              [-q | --quiet] [--exit-code] [--get-url]\n"
 "              [--symref] [<repository> [<refs>...]]"
 msgstr ""
 "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<Programm>]\n"
-"                     [-q | --quiet] [--exit-code] [--get-url]\n"
-"                     [--symref] [<Repository> [<Referenzen>...]]"
+"              [-q | --quiet] [--exit-code] [--get-url]\n"
+"              [--symref] [<Repository> [<Referenzen>...]]"
 
 #: builtin/ls-remote.c:60
 msgid "do not print remote URL"
@@ -18457,9 +18453,9 @@ msgid "Not handling anything other than two heads merge."
 msgstr "Es wird nur der Merge von zwei Branches behandelt."
 
 #: builtin/merge.c:743
-#, fuzzy, c-format
+#, c-format
 msgid "unknown strategy option: -X%s"
-msgstr "Unbekannte Option: %s\n"
+msgstr "unbekannte Strategie-Option: -X%s"
 
 #: builtin/merge.c:762 t/helper/test-fast-rebase.c:223
 #, c-format
@@ -18731,11 +18727,12 @@ msgid "allow creation of more than one tree"
 msgstr "die Erstellung von mehr als einem \"Tree\"-Objekt erlauben"
 
 #: builtin/multi-pack-index.c:10
-#, fuzzy
 msgid ""
 "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-"
 "snapshot=<path>]"
-msgstr "git multi-pack-index [<Optionen>] write [--preferred-pack=<Paket>]"
+msgstr ""
+"git multi-pack-index [<Optionen>] write [--preferred-pack=<Paket>][--refs-"
+"snapshot=<Pfad>]"
 
 #: builtin/multi-pack-index.c:14
 msgid "git multi-pack-index [<options>] verify"
@@ -18764,18 +18761,16 @@ msgstr ""
 "Paket für die Wiederbenutzung, wenn eine Multi-Pack Bitmap berechnet wird"
 
 #: builtin/multi-pack-index.c:100
-#, fuzzy
 msgid "write multi-pack bitmap"
-msgstr "Fehler beim Schreiben des multi-pack-index"
+msgstr "schreibe Multipack-Bitmap"
 
 #: builtin/multi-pack-index.c:105
-#, fuzzy
 msgid "write multi-pack index containing only given indexes"
-msgstr "git multi-pack-index [<Optionen>] verify"
+msgstr "schreibe nur Multipack-Bitmap-Index, die vorgegebene Indexe enthalten"
 
 #: builtin/multi-pack-index.c:107
 msgid "refs snapshot for selecting bitmap commits"
-msgstr ""
+msgstr "Referenzen-Snapshot, um Bitmap-Commits auszuwählen"
 
 #: builtin/multi-pack-index.c:202
 msgid ""
@@ -19416,9 +19411,8 @@ msgid "failed to stat %s"
 msgstr "Konnte '%s' nicht lesen"
 
 #: builtin/pack-objects.c:1268
-#, fuzzy
 msgid "failed to write bitmap index"
-msgstr "Bitmap-Index schreiben"
+msgstr "Fehler beim Schreiben des Bitmap-Index"
 
 #: builtin/pack-objects.c:1294
 #, c-format
@@ -19988,7 +19982,6 @@ msgid "ignoring --verify-signatures for rebase"
 msgstr "Ignoriere --verify-signatures für Rebase"
 
 #: builtin/pull.c:936
-#, fuzzy
 msgid ""
 "You have divergent branches and need to specify how to reconcile them.\n"
 "You can do so by running one of the following commands sometime before\n"
@@ -20004,10 +19997,10 @@ msgid ""
 "or --ff-only on the command line to override the configured default per\n"
 "invocation.\n"
 msgstr ""
-"Es wird davon abgeraten zu Pullen, ohne anzugeben, wie mit abweichenden\n"
-"Branches umgegangen werden soll. Sie können diese Nachricht unterdrücken,\n"
-"indem Sie einen der folgenden Befehle ausführen, bevor der nächste Pull\n"
-"ausgeführt wird:\n"
+"Sie haben abweichende Branches und müssen angeben, wie mit diesen\n"
+"umgegangen werden soll.\n"
+"Sie können dies tun, indem Sie einen der folgenden Befehle vor dem\n"
+"nächsten Pull ausführen:\n"
 "\n"
 "  git config pull.rebase false  # Merge (Standard-Strategie)\n"
 "  git config pull.rebase true   # Rebase\n"
@@ -20068,13 +20061,14 @@ msgid "Cannot rebase onto multiple branches."
 msgstr "Kann Rebase nicht auf mehrere Branches ausführen."
 
 #: builtin/pull.c:1068
-#, fuzzy
 msgid "Cannot fast-forward to multiple branches."
-msgstr "Kann Rebase nicht auf mehrere Branches ausführen."
+msgstr "Kann nicht zu mehreren Branches vorspulen."
 
 #: builtin/pull.c:1082
 msgid "Need to specify how to reconcile divergent branches."
 msgstr ""
+"Es muss angegeben werden, wie mit abweichenden Branches umgegangen werden "
+"sollen."
 
 #: builtin/pull.c:1096
 msgid "cannot rebase with locally recorded submodule modifications"
@@ -20447,16 +20441,14 @@ msgid "need two commit ranges"
 msgstr "Benötige zwei Commit-Bereiche."
 
 #: builtin/read-tree.c:41
-#, fuzzy
 msgid ""
 "git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>) "
 "[-u | -i]] [--no-sparse-checkout] [--index-output=<file>] (--empty | <tree-"
 "ish1> [<tree-ish2> [<tree-ish3>]])"
 msgstr ""
 "git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<Präfix>) "
-"[-u [--exclude-per-directory=<gitignore>] | -i]] [--no-sparse-checkout] [--"
-"index-output=<Datei>] (--empty | <Commit-Referenz1> [<Commit-Referenz2> "
-"[<Commit-Referenz3>]])"
+"[-u | -i]] [--no-sparse-checkout] [--index-output=<Datei>] (--empty | "
+"<Commit-Referenz1> [<Commit-Referenz2> [<Commit-Referenz3>]])"
 
 #: builtin/read-tree.c:116
 msgid "write resulting index to <file>"
@@ -20825,11 +20817,8 @@ msgid "It looks like 'git am' is in progress. Cannot rebase."
 msgstr "'git am' scheint im Gange zu sein. Kann Rebase nicht durchführen."
 
 #: builtin/rebase.c:1180
-#, fuzzy
 msgid "--preserve-merges was replaced by --rebase-merges"
-msgstr ""
-"'git rebase --preserve-merges' ist veraltet. Benutzen Sie stattdessen '--"
-"rebase-merges'."
+msgstr "--preserve-merges wurde durch --rebase-merges ersetzt"
 
 #: builtin/rebase.c:1193
 msgid "cannot combine '--keep-base' with '--onto'"
@@ -20948,9 +20937,9 @@ msgid "Does not point to a valid commit '%s'"
 msgstr "'%s' zeigt auf keinen gültigen Commit."
 
 #: builtin/rebase.c:1607
-#, fuzzy, c-format
+#, c-format
 msgid "no such branch/commit '%s'"
-msgstr "fatal: Branch/Commit '%s' nicht gefunden"
+msgstr "Branch/Commit '%s' nicht gefunden"
 
 #: builtin/rebase.c:1618 builtin/submodule--helper.c:39
 #: builtin/submodule--helper.c:2658
@@ -21294,7 +21283,7 @@ msgstr "Konnte symbolische Referenz für Hauptbranch von '%s' nicht einrichten"
 #: builtin/remote.c:322
 #, c-format
 msgid "unhandled branch.%s.rebase=%s; assuming 'true'"
-msgstr ""
+msgstr "unbehandeltes branch.%s.rebase=%s; 'true' wird angenommen"
 
 #: builtin/remote.c:366
 #, c-format
@@ -21719,14 +21708,13 @@ msgid "pack %s too large to roll up"
 msgstr "Paket %s zu groß zum Aufrollen"
 
 #: builtin/repack.c:496
-#, fuzzy, c-format
+#, c-format
 msgid "could not open tempfile %s for writing"
-msgstr "Konnte '%s' nicht zum Schreiben öffnen."
+msgstr "konnte temporäre Datei '%s' nicht zum Schreiben öffnen"
 
 #: builtin/repack.c:514
-#, fuzzy
 msgid "could not close refs snapshot tempfile"
-msgstr "konnte temporäre Datei nicht erstellen"
+msgstr "konnte temporäre Referenzen-Snapshot-Datei nicht schließen"
 
 #: builtin/repack.c:628
 msgid "pack everything in a single pack"
@@ -21816,9 +21804,8 @@ msgid "find a geometric progression with factor <N>"
 msgstr "eine geometrische Progression mit Faktor <N> finden"
 
 #: builtin/repack.c:668
-#, fuzzy
 msgid "write a multi-pack index of the resulting packs"
-msgstr "Fehler beim Ausführen von 'git multi-pack-index repack'"
+msgstr "ein Multipack-Index des resultierenden Pakets schreiben"
 
 #: builtin/repack.c:678
 msgid "cannot delete packs in a precious-objects repo"
@@ -22548,18 +22535,16 @@ msgid "git rm: unable to remove %s"
 msgstr "git rm: konnte %s nicht löschen"
 
 #: builtin/send-pack.c:20
-#, fuzzy
 msgid ""
 "git send-pack [--mirror] [--dry-run] [--force]\n"
 "              [--receive-pack=<git-receive-pack>]\n"
 "              [--verbose] [--thin] [--atomic]\n"
 "              [<host>:]<directory> (--all | <ref>...)"
 msgstr ""
-"git send-pack [--all | --mirror] [--dry-run] [--force] [--receive-pack=<git-"
-"receive-pack>] [--verbose] [--thin] [--atomic] [<Host>:]<Verzeichnis> "
-"[<Referenz>...]\n"
-"  --all und die explizite Angabe einer <Referenz> schließen sich gegenseitig "
-"aus."
+"git send-pack [--mirror] [--dry-run] [--force]\n"
+"              [--receive-pack=<git-receive-pack>]\n"
+"              [--verbose] [--thin] [--atomic]\n"
+"              [<Host>:]<Verzeichnis> (--all | <Referenz>...)"
 
 #: builtin/send-pack.c:192
 msgid "remote name"
@@ -22636,7 +22621,6 @@ msgid "too many arguments given outside repository"
 msgstr "zu viele Argumente außerhalb des Repositories angegeben"
 
 #: builtin/show-branch.c:13
-#, fuzzy
 msgid ""
 "git show-branch [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n"
 "                [--current] [--color[=<when>] | --no-color] [--sparse]\n"
@@ -22644,9 +22628,9 @@ msgid ""
 "                [--no-name | --sha1-name] [--topics] [(<rev> | <glob>)...]"
 msgstr ""
 "git show-branch [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n"
-"\t\t[--current] [--color[=<Wann>] | --no-color] [--sparse]\n"
-"\t\t[--more=<n> | --list | --independent | --merge-base]\n"
-"\t\t[--no-name | --sha1-name] [--topics] [(<Commit> | <glob>)...]"
+"                [--current] [--color[=<Wann>] | --no-color] [--sparse]\n"
+"                [--more=<n> | --list | --independent | --merge-base]\n"
+"                [--no-name | --sha1-name] [--topics] [(<Commit> | <glob>)...]"
 
 #: builtin/show-branch.c:17
 msgid "git show-branch (-g | --reflog)[=<n>[,<base>]] [--list] [<ref>]"
@@ -22849,11 +22833,13 @@ msgid ""
 "directory '%s' contains untracked files, but is not in the sparse-checkout "
 "cone"
 msgstr ""
+"Verzeichnis '%s' enthält unversionierte Dateien, aber ist nicht innerhalb "
+"des partiellen Checkouts im Cone-Modus"
 
 #: builtin/sparse-checkout.c:181
-#, fuzzy, c-format
+#, c-format
 msgid "failed to remove directory '%s'"
-msgstr "Fehler beim Erstellen von Verzeichnis '%s'"
+msgstr "Fehler beim Löschen des Verzeichnisses '%s'"
 
 #: builtin/sparse-checkout.c:321
 msgid "failed to create directory for sparse-checkout file"
@@ -22989,13 +22975,12 @@ msgstr ""
 "          [--] [<Pfadspezifikation>...]]"
 
 #: builtin/stash.c:87
-#, fuzzy
 msgid ""
 "git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
 "               [-u|--include-untracked] [-a|--all] [<message>]"
 msgstr ""
 "git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
-"          [-u|--include-untracked] [-a|--all] [<Nachricht>]"
+"               [-u|--include-untracked] [-a|--all] [<Nachricht>]"
 
 #: builtin/stash.c:130
 #, c-format
@@ -23631,62 +23616,60 @@ msgid "Failed to clone '%s' a second time, aborting"
 msgstr "Zweiter Versuch '%s' zu klonen fehlgeschlagen, breche ab."
 
 #: builtin/submodule--helper.c:2372
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to checkout '%s' in submodule path '%s'"
-msgstr "Konnte '$sha1' in Submodul-Pfad '$displaypath' nicht auschecken."
+msgstr "Konnte '%s' nicht im Submodul-Pfad '%s' auschecken"
 
 #: builtin/submodule--helper.c:2376
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to rebase '%s' in submodule path '%s'"
-msgstr "Rebase auf '$sha1' in Submodul-Pfad '$displaypath' nicht möglich"
+msgstr "Rebase von '%s' in Submodul-Pfad '%s' nicht möglich"
 
 #: builtin/submodule--helper.c:2380
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to merge '%s' in submodule path '%s'"
-msgstr "Merge von '$sha1' in Submodul-Pfad '$displaypath' fehlgeschlagen"
+msgstr "Merge von '%s' in Submodul-Pfad '%s' fehlgeschlagen"
 
 #: builtin/submodule--helper.c:2384
-#, fuzzy, c-format
+#, c-format
 msgid "Execution of '%s %s' failed in submodule path '%s'"
-msgstr ""
-"Ausführung von '$command $sha1' in Submodul-Pfad '$displaypath' "
-"fehlgeschlagen"
+msgstr "Ausführung von '%s %s' in Submodul-Pfad '%s' fehlgeschlagen"
 
 #: builtin/submodule--helper.c:2408
-#, fuzzy, c-format
+#, c-format
 msgid "Submodule path '%s': checked out '%s'\n"
-msgstr "Submodul-Pfad: '$displaypath': '$sha1' ausgecheckt"
+msgstr "Submodul-Pfad '%s': '%s' ausgecheckt\n"
 
 #: builtin/submodule--helper.c:2412
-#, fuzzy, c-format
+#, c-format
 msgid "Submodule path '%s': rebased into '%s'\n"
-msgstr "Submodul-Pfad '$displaypath': Rebase auf '$sha1'"
+msgstr "Submodul-Pfad '%s': Rebase in '%s'\n"
 
 #: builtin/submodule--helper.c:2416
-#, fuzzy, c-format
+#, c-format
 msgid "Submodule path '%s': merged in '%s'\n"
-msgstr "Submodul-Pfad '$displaypath': zusammengeführt in '$sha1'"
+msgstr "Submodul-Pfad '%s': zusammengeführt in '%s'\n"
 
 #: builtin/submodule--helper.c:2420
-#, fuzzy, c-format
+#, c-format
 msgid "Submodule path '%s': '%s %s'\n"
-msgstr "Submodul-Pfad '%s' nicht initialisiert"
+msgstr "Submodul-Pfad '%s': '%s %s'\n"
 
 #: builtin/submodule--helper.c:2444
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to fetch in submodule path '%s'; trying to directly fetch %s:"
 msgstr ""
-"Konnte \"fetch\" in Submodul-Pfad '$displaypath' nicht ausführen. Versuche "
-"$sha1 direkt anzufordern:"
+"Konnte \"fetch\" in Submodul-Pfad '%s' nicht ausführen. Versuche %s direkt "
+"anzufordern:"
 
 #: builtin/submodule--helper.c:2453
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Fetched in submodule path '%s', but it did not contain %s. Direct fetching "
 "of that commit failed."
 msgstr ""
-"\"fetch\" in Submodul-Pfad '$displaypath' ausgeführt, aber $sha1 nicht\n"
-"enthalten. Direktes Anfordern dieses Commits ist fehlgeschlagen."
+"\"fetch\" in Submodul-Pfad '%s' ausgeführt, aber enthielt nicht %s. "
+"Direktes Anfordern dieses Commits ist fehlgeschlagen."
 
 #: builtin/submodule--helper.c:2504 builtin/submodule--helper.c:2574
 #: builtin/submodule--helper.c:2812
@@ -23731,49 +23714,46 @@ msgid "bad value for update parameter"
 msgstr "Fehlerhafter Wert für update Parameter"
 
 #: builtin/submodule--helper.c:2565
-#, fuzzy
 msgid "suppress output for update by rebase or merge"
-msgstr "Ausgaben beim Setzen der URL eines Submoduls unterdrücken"
+msgstr "Ausgaben bei Aktualisierung durch Rebase oder Merge unterdrücken"
 
 #: builtin/submodule--helper.c:2566
-#, fuzzy
 msgid "force checkout updates"
-msgstr "Aktualisierung erzwingen"
+msgstr "Checkout-Aktualisierungen erzwingen"
 
 #: builtin/submodule--helper.c:2568
-#, fuzzy
 msgid "don't fetch new objects from the remote site"
-msgstr "Tree-Objekt vom aktuellen Index erstellen"
+msgstr "keine neuen Objekte von Remote abrufen"
 
 #: builtin/submodule--helper.c:2570
 msgid "overrides update mode in case the repository is a fresh clone"
 msgstr ""
+"überschreibt den Aktualisierungsmodus, falls es sich bei dem Repository um "
+"einen neuen Klon handelt"
 
 #: builtin/submodule--helper.c:2571
-#, fuzzy
 msgid "depth for shallow fetch"
-msgstr "Tiefe des Klons mit unvollständiger Historie (shallow)"
+msgstr "Tiefe des Abrufens mit unvollständiger Historie (shallow)"
 
 #: builtin/submodule--helper.c:2581
 msgid "sha1"
-msgstr ""
+msgstr "sha1"
 
 #: builtin/submodule--helper.c:2582
 msgid "SHA1 expected by superproject"
-msgstr ""
+msgstr "SHA1 vom übergeordneten Projekt erwartet"
 
 #: builtin/submodule--helper.c:2584
 msgid "subsha1"
-msgstr ""
+msgstr "subsha1"
 
 #: builtin/submodule--helper.c:2585
 msgid "SHA1 of submodule's HEAD"
-msgstr ""
+msgstr "SHA1 vom HEAD des Submoduls"
 
 #: builtin/submodule--helper.c:2591
-#, fuzzy
 msgid "git submodule--helper run-update-procedure [<options>] <path>"
-msgstr "git submodule--helper init [<Optionen>] [<Pfad>]"
+msgstr "git submodule--helper run-update-procedure [<Optionen>] <Pfad>"
 
 #: builtin/submodule--helper.c:2662
 #, c-format
@@ -23869,14 +23849,14 @@ msgid "'%s' already exists and is not a valid git repo"
 msgstr "'%s' existiert bereits und ist kein gültiges Git-Repository"
 
 #: builtin/submodule--helper.c:3053
-#, fuzzy, c-format
+#, c-format
 msgid "A git directory for '%s' is found locally with remote(s):\n"
 msgstr ""
 "Ein Git-Verzeichnis für '%s' wurde lokal gefunden mit den Remote-"
-"Repositories:"
+"Repositories:\n"
 
 #: builtin/submodule--helper.c:3060
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "If you want to reuse this local git directory instead of cloning again from\n"
 "  %s\n"
@@ -23891,7 +23871,7 @@ msgstr ""
 "zu klonen, benutzen Sie die Option '--force'. Wenn das lokale Git-"
 "Verzeichnis\n"
 "nicht das korrekte Repository ist oder Sie unsicher sind, was das bedeutet,\n"
-"wählen Sie einen anderen Namen mit der Option '--name'.\n"
+"wählen Sie einen anderen Namen mit der Option '--name'."
 
 #: builtin/submodule--helper.c:3072
 #, c-format
@@ -23904,55 +23884,53 @@ msgid "unable to checkout submodule '%s'"
 msgstr "Kann Submodul '%s' nicht auschecken"
 
 #: builtin/submodule--helper.c:3148
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to add submodule '%s'"
-msgstr "Hinzufügen von Submodul '$sm_path' fehlgeschlagen"
+msgstr "Hinzufügen von Submodul '%s' fehlgeschlagen"
 
 #: builtin/submodule--helper.c:3152 builtin/submodule--helper.c:3157
 #: builtin/submodule--helper.c:3165
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to register submodule '%s'"
-msgstr "Fehler beim Eintragen von Submodul '$sm_path' in die Konfiguration."
+msgstr "Fehler beim Registrieren von Submodul '%s'"
 
 #: builtin/submodule--helper.c:3221
-#, fuzzy, c-format
+#, c-format
 msgid "'%s' already exists in the index"
-msgstr "'$sm_path' ist bereits zum Commit vorgemerkt"
+msgstr "'%s' ist bereits zum Commit vorgemerkt"
 
 #: builtin/submodule--helper.c:3224
-#, fuzzy, c-format
+#, c-format
 msgid "'%s' already exists in the index and is not a submodule"
-msgstr "'$sm_path' ist bereits zum Commit vorgemerkt und ist kein Submodul"
+msgstr "'%s' ist bereits zum Commit vorgemerkt und ist kein Submodul"
 
 #: builtin/submodule--helper.c:3253
-#, fuzzy
 msgid "branch of repository to add as submodule"
-msgstr "Branch des Repositories zum Auschecken beim Klonen"
+msgstr "Branch des Repositories zum Hinzufügen als Submodul"
 
 #: builtin/submodule--helper.c:3254
 msgid "allow adding an otherwise ignored submodule path"
 msgstr "das Hinzufügen eines andernfalls ignorierten Submodul-Pfads erlauben"
 
 #: builtin/submodule--helper.c:3256
-#, fuzzy
 msgid "print only error messages"
-msgstr "nur zusammengeführte Referenzen ausgeben"
+msgstr "nur Fehlermeldungen ausgeben"
 
 #: builtin/submodule--helper.c:3260
-#, fuzzy
 msgid "borrow the objects from reference repositories"
-msgstr "geliehene Objekte von alternativem Objektspeicher ignorieren"
+msgstr "die Objekte von Referenz-Repositories ausleihen"
 
 #: builtin/submodule--helper.c:3262
 msgid ""
 "sets the submodule’s name to the given string instead of defaulting to its "
 "path"
 msgstr ""
+"legt den Namen des Submoduls auf die angegebene Zeichenkette fest, statt "
+"standardmäßig dessen Pfad zu nehmen"
 
 #: builtin/submodule--helper.c:3269
-#, fuzzy
 msgid "git submodule--helper add [<options>] [--] <repository> [<path>]"
-msgstr "git submodule--helper summary [<Optionen>] [<Commit>] [--] [<Pfad>]"
+msgstr "git submodule--helper add [<Optionen>] [--] <Repository> [<Pfad>]"
 
 #: builtin/submodule--helper.c:3297
 msgid "Relative path can only be used from the toplevel of the working tree"
@@ -23961,14 +23939,14 @@ msgstr ""
 "benutzt werden."
 
 #: builtin/submodule--helper.c:3305
-#, fuzzy, c-format
+#, c-format
 msgid "repo URL: '%s' must be absolute or begin with ./|../"
-msgstr "repo URL: '$repo' muss absolut sein oder mit ./|../ beginnen"
+msgstr "repo URL: '%s' muss absolut sein oder mit ./|../ beginnen"
 
 #: builtin/submodule--helper.c:3340
-#, fuzzy, c-format
+#, c-format
 msgid "'%s' is not a valid submodule name"
-msgstr "'%s' ist kein gültiger Name für ein Remote-Repository"
+msgstr "'%s' ist kein gültiger Submodul-Name"
 
 #: builtin/submodule--helper.c:3404 git.c:449 git.c:723
 #, c-format
@@ -24010,20 +23988,18 @@ msgid "reason of the update"
 msgstr "Grund für die Aktualisierung"
 
 #: builtin/tag.c:25
-#, fuzzy
 msgid ""
 "git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>]\n"
 "        <tagname> [<head>]"
 msgstr ""
-"git tag [-a | -s | -u <Schlüssel-id>] [-f] [-m <Beschreibung> | -F <Datei>]\n"
-"\t\t<Tagname> [<Commit>]"
+"git tag [-a | -s | -u <Schlüssel-ID>] [-f] [-m <Beschreibung> | -F <Datei>]\n"
+"        <Tagname> [<Commit>]"
 
 #: builtin/tag.c:27
 msgid "git tag -d <tagname>..."
 msgstr "git tag -d <Tagname>..."
 
 #: builtin/tag.c:28
-#, fuzzy
 msgid ""
 "git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--"
 "points-at <object>]\n"
@@ -24032,7 +24008,7 @@ msgid ""
 msgstr ""
 "git tag -l [-n[<Nummer>]] [--contains <Commit>] [--no-contains <Commit>] [--"
 "points-at <Objekt>]\n"
-"\t\t[--format=<format>] [--merged <Commit>] [--no-merged <Commit>] "
+"        [--format=<format>] [--merged <Commit>] [--no-merged <Commit>] "
 "[<Muster>...]"
 
 #: builtin/tag.c:30
@@ -24550,7 +24526,7 @@ msgstr "nach einem einzigen Request/Response-Austausch beenden"
 
 #: builtin/upload-pack.c:26
 msgid "serve up the info/refs for git-http-backend"
-msgstr ""
+msgstr "info/refs für git-http-backend übergeben"
 
 #: builtin/upload-pack.c:29
 msgid "do not try <directory>/.git/ if <directory> is no Git directory"
@@ -25169,11 +25145,10 @@ msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr "Kontrolle über Delegation wird mit cURL < 7.22.0 nicht unterstützt"
 
 #: http.c:380
-#, fuzzy
 msgid "Public key pinning not supported with cURL < 7.39.0"
 msgstr ""
-"Das Anheften des öffentlichen Schlüssels wird mit cURL < 7.44.0\n"
-"nicht unterstützt."
+"Das Anheften des öffentlichen Schlüssels wird mit cURL < 7.39.0 nicht "
+"unterstützt"
 
 #: http.c:812
 msgid "CURLSSLOPT_NO_REVOKE not supported with cURL < 7.44.0"
@@ -25239,6 +25214,8 @@ msgstr "Authentifizierung fehlgeschlagen für '%s'"
 #, c-format
 msgid "unable to access '%s' with http.pinnedPubkey configuration: %s"
 msgstr ""
+"auf '%s' kann nicht mit Konfiguration http.pinnedPubkey zugegriffen werden: "
+"%s"
 
 #: remote-curl.c:508
 #, c-format
@@ -26983,537 +26960,3 @@ msgstr "Lasse %s mit Backup-Suffix '%s' aus.\n"
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr "Wollen Sie %s wirklich versenden? [y|N]: "
-
-#~ msgid ""
-#~ "The following pathspecs didn't match any eligible path, but they do match "
-#~ "index\n"
-#~ "entries outside the current sparse checkout:\n"
-#~ msgstr ""
-#~ "Die folgenden Pfadspezifikationen entsprachen keinem geeigneten Pfad, "
-#~ "aber\n"
-#~ "entsprechen Index-Einträgen außerhalb des aktuellen partiellen "
-#~ "Checkouts:\n"
-
-#~ msgid ""
-#~ "Disable or modify the sparsity rules if you intend to update such entries."
-#~ msgstr ""
-#~ "Deaktivieren oder verändern Sie die Regeln für partielle Checkouts, wenn "
-#~ "Sie solche Einträge aktualisieren möchten."
-
-#~ msgid "could not set GIT_DIR to '%s'"
-#~ msgstr "konnte GIT_DIR nicht zu '%s' setzen"
-
-#~ msgid "unable to unpack %s header with --allow-unknown-type"
-#~ msgstr "Konnte %s Kopfbereich nicht mit --allow-unknown-type entpacken."
-
-#~ msgid "unable to parse %s header with --allow-unknown-type"
-#~ msgstr "Konnte %s Kopfbereich mit --allow-unknown-type nicht parsen."
-
-#~ msgid "open /dev/null failed"
-#~ msgstr "Öffnen von /dev/null fehlgeschlagen"
-
-#~ msgid ""
-#~ "after resolving the conflicts, mark the corrected paths\n"
-#~ "with 'git add <paths>' or 'git rm <paths>'\n"
-#~ "and commit the result with 'git commit'"
-#~ msgstr ""
-#~ "nach Auflösung der Konflikte markieren Sie die korrigierten Pfade\n"
-#~ "mit 'git add <Pfade>' oder 'git rm <Pfade>' und tragen Sie das Ergebnis "
-#~ "mit\n"
-#~ "'git commit' ein"
-
-#~ msgid "open /dev/null or dup failed"
-#~ msgstr "Öffnen von /dev/null oder dup fehlgeschlagen."
-
-#~ msgid "attempting to use sparse-index without cone mode"
-#~ msgstr "versuche partiellen Index ohne Cone-Modus zu benutzen"
-
-#~ msgid "unable to update cache-tree, staying full"
-#~ msgstr "konnte Cache-Verzeichnis nicht aktualisieren, bleibt voll"
-
-#~ msgid "Could not open '%s' for writing."
-#~ msgstr "Konnte '%s' nicht zum Schreiben öffnen."
-
-#~ msgid "could not create archive file '%s'"
-#~ msgstr "Konnte Archiv-Datei '%s' nicht erstellen."
-
-#~ msgid ""
-#~ "git bisect--helper --bisect-next-check <good_term> <bad_term> [<term>]"
-#~ msgstr ""
-#~ "git bisect--helper --bisect-next-check <Begriff_gut> <Begriff_schlecht> "
-#~ "[<Begriff>]"
-
-#~ msgid "--bisect-next-check requires 2 or 3 arguments"
-#~ msgstr "--bisect-next-check benötigt 2 oder 3 Argumente"
-
-#~ msgid "couldn't create a new file at '%s'"
-#~ msgstr "konnte keine neue Datei unter '%s' erstellen"
-
-#~ msgid "git commit-tree: failed to open '%s'"
-#~ msgstr "git commit-tree: Fehler beim Öffnen von '%s'"
-
-#~ msgid "cannot open packfile '%s'"
-#~ msgstr "Kann Paketdatei '%s' nicht öffnen"
-
-#~ msgid "cannot store pack file"
-#~ msgstr "Kann Paketdatei nicht speichern"
-
-#~ msgid "cannot store index file"
-#~ msgstr "Kann Indexdatei nicht speichern"
-
-#~ msgid "exclude patterns are read from <file>"
-#~ msgstr "Muster, gelesen von <Datei>, ausschließen"
-
-#~ msgid "Unknown option for merge-recursive: -X%s"
-#~ msgstr "Unbekannte Option für merge-recursive: -X%s"
-
-#~ msgid "unusable todo list: '%s'"
-#~ msgstr "Unbenutzbare TODO-Liste: '%s'"
-
-#~ msgid "git rebase--interactive [<options>]"
-#~ msgstr "git rebase--interactive [<Optionen>]"
-
-#~ msgid "rebase merge commits"
-#~ msgstr "Rebase auf Merge-Commits ausführen"
-
-#~ msgid "keep original branch points of cousins"
-#~ msgstr "originale Branch-Punkte der Cousins behalten"
-
-#~ msgid "move commits that begin with squash!/fixup!"
-#~ msgstr "Commits verschieben, die mit squash!/fixup! beginnen"
-
-#~ msgid "sign commits"
-#~ msgstr "Commits signieren"
-
-#~ msgid "continue rebase"
-#~ msgstr "Rebase fortsetzen"
-
-#~ msgid "skip commit"
-#~ msgstr "Commit auslassen"
-
-#~ msgid "edit the todo list"
-#~ msgstr "die TODO-Liste bearbeiten"
-
-#~ msgid "show the current patch"
-#~ msgstr "den aktuellen Patch anzeigen"
-
-#~ msgid "shorten commit ids in the todo list"
-#~ msgstr "Commit-IDs in der TODO-Liste verkürzen"
-
-#~ msgid "expand commit ids in the todo list"
-#~ msgstr "Commit-IDs in der TODO-Liste erweitern"
-
-#~ msgid "check the todo list"
-#~ msgstr "die TODO-Liste prüfen"
-
-#~ msgid "rearrange fixup/squash lines"
-#~ msgstr "fixup/squash-Zeilen umordnen"
-
-#~ msgid "insert exec commands in todo list"
-#~ msgstr "\"exec\"-Befehle in TODO-Liste einfügen"
-
-#~ msgid "onto"
-#~ msgstr "auf"
-
-#~ msgid "restrict-revision"
-#~ msgstr "Begrenzungscommit"
-
-#~ msgid "restrict revision"
-#~ msgstr "Begrenzungscommit"
-
-#~ msgid "squash-onto"
-#~ msgstr "squash-onto"
-
-#~ msgid "squash onto"
-#~ msgstr "squash onto"
-
-#~ msgid "the upstream commit"
-#~ msgstr "der Upstream-Commit"
-
-#~ msgid "head-name"
-#~ msgstr "head-Name"
-
-#~ msgid "head name"
-#~ msgstr "head-Name"
-
-#~ msgid "rebase strategy"
-#~ msgstr "Rebase-Strategie"
-
-#~ msgid "strategy-opts"
-#~ msgstr "Strategie-Optionen"
-
-#~ msgid "strategy options"
-#~ msgstr "Strategie-Optionen"
-
-#~ msgid "switch-to"
-#~ msgstr "wechseln zu"
-
-#~ msgid "the branch or commit to checkout"
-#~ msgstr "der Branch oder Commit zum Auschecken"
-
-#~ msgid "onto-name"
-#~ msgstr "onto-Name"
-
-#~ msgid "onto name"
-#~ msgstr "onto-Name"
-
-#~ msgid "cmd"
-#~ msgstr "Befehl"
-
-#~ msgid "the command to run"
-#~ msgstr "auszuführender Befehl"
-
-#~ msgid "--[no-]rebase-cousins has no effect without --rebase-merges"
-#~ msgstr "--[no-]rebase-cousins hat ohne --rebase-merges keine Auswirkung"
-
-#~ msgid "cannot combine '--preserve-merges' with '--rebase-merges'"
-#~ msgstr ""
-#~ "'--preserve-merges' kann nicht mit '--rebase-merges' kombiniert werden."
-
-#~ msgid ""
-#~ "error: cannot combine '--preserve-merges' with '--reschedule-failed-exec'"
-#~ msgstr ""
-#~ "Fehler: '--preserve-merges' kann nicht mit '--reschedule-failed-exec' "
-#~ "kombiniert werden."
-
-#~ msgid ""
-#~ "git submodule--helper add-clone [<options>...] --url <url> --path <path> "
-#~ "--name <name>"
-#~ msgstr ""
-#~ "git submodule--helper add-clone [<Optionen>...] --url <URL> --path <Pfad> "
-#~ "--name <Name>"
-
-#~ msgid "failed to create file %s"
-#~ msgstr "Konnte Datei '%s' nicht erstellen"
-
-#~ msgid "exit immediately after initial ref advertisement"
-#~ msgstr "direkt nach der initialen Angabe der Commits beenden"
-
-#~ msgid "socket/pipe already in use: '%s'"
-#~ msgstr "Socket/Pipe bereits in Benutzung: '%s'"
-
-#~ msgid "could not start server on: '%s'"
-#~ msgstr "konnte Server nicht starten auf: '%s'"
-
-#~ msgid "could not spawn daemon in the background"
-#~ msgstr "Daemon konnte nicht im Hintergrund erzeugt werden"
-
-#~ msgid "waitpid failed"
-#~ msgstr "waitpid fehlgeschlagen"
-
-#~ msgid "daemon not online yet"
-#~ msgstr "Daemon ist noch nicht online"
-
-#~ msgid "daemon failed to start"
-#~ msgstr "Fehler beim Starten des Daemons"
-
-#~ msgid "waitpid is confused"
-#~ msgstr "waitpid ist verwirrt"
-
-#~ msgid "daemon has not shutdown yet"
-#~ msgstr "Daemon ist noch nicht heruntergefahren"
-
-#~ msgid "Protocol restrictions not supported with cURL < 7.19.4"
-#~ msgstr "Protokollbeschränkungen werden mit cURL < 7.19.4 nicht unterstützt."
-
-#~ msgid "running $command"
-#~ msgstr "führe $command aus"
-
-#~ msgid "'$sm_path' does not have a commit checked out"
-#~ msgstr "'$sm_path' hat keinen Commit ausgecheckt"
-
-#~ msgid "Submodule path '$displaypath': '$command $sha1'"
-#~ msgstr "Submodul-Pfad '$displaypath': '$command $sha1'"
-
-#~ msgid "Applied autostash."
-#~ msgstr "Automatischen Stash angewendet."
-
-#~ msgid "Cannot store $stash_sha1"
-#~ msgstr "Kann $stash_sha1 nicht speichern."
-
-#~ msgid ""
-#~ "Applying autostash resulted in conflicts.\n"
-#~ "Your changes are safe in the stash.\n"
-#~ "You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
-#~ msgstr ""
-#~ "Anwendung des automatischen Stash resultierte in Konflikten.\n"
-#~ "Ihre Änderungen sind im Stash sicher.\n"
-#~ "Sie können jederzeit \"git stash pop\" oder \"git stash drop\" "
-#~ "ausführen.\n"
-
-#~ msgid "Rebasing ($new_count/$total)"
-#~ msgstr "Führe Rebase aus ($new_count/$total)"
-
-#~ msgid ""
-#~ "\n"
-#~ "Commands:\n"
-#~ "p, pick <commit> = use commit\n"
-#~ "r, reword <commit> = use commit, but edit the commit message\n"
-#~ "e, edit <commit> = use commit, but stop for amending\n"
-#~ "s, squash <commit> = use commit, but meld into previous commit\n"
-#~ "f, fixup <commit> = like \"squash\", but discard this commit's log "
-#~ "message\n"
-#~ "x, exec <commit> = run command (the rest of the line) using shell\n"
-#~ "d, drop <commit> = remove commit\n"
-#~ "l, label <label> = label current HEAD with a name\n"
-#~ "t, reset <label> = reset HEAD to a label\n"
-#~ "m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]\n"
-#~ ".       create a merge commit using the original merge commit's\n"
-#~ ".       message (or the oneline, if no original merge commit was\n"
-#~ ".       specified). Use -c <commit> to reword the commit message.\n"
-#~ "\n"
-#~ "These lines can be re-ordered; they are executed from top to bottom.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Befehle:\n"
-#~ "p, pick <Commit> = Commit verwenden\n"
-#~ "r, reword <Commit> = Commit verwenden, aber Commit-Beschreibung "
-#~ "bearbeiten\n"
-#~ "e, edit <Commit> = Commit verwenden, aber zum Nachbessern anhalten\n"
-#~ "s, squash <Commit> = Commit verwenden, aber mit vorherigem Commit "
-#~ "vereinen\n"
-#~ "f, fixup <Commit> = wie \"squash\", aber diese Commit-Beschreibung "
-#~ "verwerfen\n"
-#~ "x, exec <Commit> = Befehl (Rest der Zeile) mittels Shell ausführen\n"
-#~ "d, drop <Commit> = Commit entfernen\n"
-#~ "l, label <Label> = aktuellen HEAD mit Label versehen\n"
-#~ "t, reset <Label> = HEAD zu einem Label umsetzen\n"
-#~ "m, merge [-C <Commit> | -c <Commit>] <Label> [# <eineZeile>]\n"
-#~ ".       Merge-Commit mit der originalen Merge-Commit-Beschreibung "
-#~ "erstellen\n"
-#~ ".       (oder die eine Zeile, wenn keine originale Merge-Commit-"
-#~ "Beschreibung\n"
-#~ ".       spezifiziert ist). Benutzen Sie -c <Commit> zum Bearbeiten der\n"
-#~ ".       Commit-Beschreibung.\n"
-#~ "\n"
-#~ "Diese Zeilen können umsortiert werden; Sie werden von oben nach unten\n"
-#~ "ausgeführt.\n"
-
-#~ msgid ""
-#~ "You can amend the commit now, with\n"
-#~ "\n"
-#~ "\tgit commit --amend $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "Once you are satisfied with your changes, run\n"
-#~ "\n"
-#~ "\tgit rebase --continue"
-#~ msgstr ""
-#~ "Sie können den Commit nun nachbessern mit:\n"
-#~ "\n"
-#~ "\tgit commit --amend $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "Sobald Sie mit Ihren Änderungen zufrieden sind, führen Sie aus:\n"
-#~ "\n"
-#~ "\tgit rebase --continue"
-
-#~ msgid "$sha1: not a commit that can be picked"
-#~ msgstr "$sha1: kein Commit der gepickt werden kann"
-
-#~ msgid "Invalid commit name: $sha1"
-#~ msgstr "Ungültiger Commit-Name: $sha1"
-
-#~ msgid "Cannot write current commit's replacement sha1"
-#~ msgstr "Kann ersetzenden SHA-1 des aktuellen Commits nicht schreiben"
-
-#~ msgid "Fast-forward to $sha1"
-#~ msgstr "Spule vor zu $sha1"
-
-#~ msgid "Cannot fast-forward to $sha1"
-#~ msgstr "Kann nicht zu $sha1 vorspulen"
-
-#~ msgid "Cannot move HEAD to $first_parent"
-#~ msgstr "Kann HEAD nicht auf $first_parent setzen"
-
-#~ msgid "Refusing to squash a merge: $sha1"
-#~ msgstr "\"squash\" eines Merges ($sha1) zurückgewiesen."
-
-#~ msgid "Error redoing merge $sha1"
-#~ msgstr "Fehler beim Wiederholen des Merges von $sha1"
-
-#~ msgid "Could not pick $sha1"
-#~ msgstr "Konnte $sha1 nicht picken"
-
-#~ msgid "This is the commit message #${n}:"
-#~ msgstr "Das ist Commit-Beschreibung #${n}:"
-
-#~ msgid "The commit message #${n} will be skipped:"
-#~ msgstr "Commit-Beschreibung #${n} wird ausgelassen:"
-
-#~ msgid "This is a combination of $count commit."
-#~ msgid_plural "This is a combination of $count commits."
-#~ msgstr[0] "Das ist eine Kombination aus $count Commit."
-#~ msgstr[1] "Das ist eine Kombination aus $count Commits."
-
-#~ msgid "Cannot write $fixup_msg"
-#~ msgstr "Kann $fixup_msg nicht schreiben"
-
-#~ msgid "This is a combination of 2 commits."
-#~ msgstr "Das ist eine Kombination aus 2 Commits."
-
-#~ msgid "Could not apply $sha1... $rest"
-#~ msgstr "Konnte $sha1... ($rest) nicht anwenden"
-
-#~ msgid ""
-#~ "Could not amend commit after successfully picking $sha1... $rest\n"
-#~ "This is most likely due to an empty commit message, or the pre-commit "
-#~ "hook\n"
-#~ "failed. If the pre-commit hook failed, you may need to resolve the issue "
-#~ "before\n"
-#~ "you are able to reword the commit."
-#~ msgstr ""
-#~ "Konnte Commit nicht nachbessern, nachdem dieser verwendet wurde: $sha1... "
-#~ "$rest\n"
-#~ "Das passierte sehr wahrscheinlich wegen einer leeren Commit-Beschreibung, "
-#~ "oder\n"
-#~ "weil der pre-commit Hook fehlschlug. Falls der pre-commit Hook "
-#~ "fehlschlug,\n"
-#~ "sollten Sie das Problem beheben, bevor Sie die Commit-Beschreibung ändern "
-#~ "können."
-
-#~ msgid "Stopped at $sha1_abbrev... $rest"
-#~ msgstr "Angehalten bei $sha1_abbrev... $rest"
-
-#~ msgid "Cannot '$squash_style' without a previous commit"
-#~ msgstr "Kann nicht '$squash_style' ohne vorherigen Commit"
-
-#~ msgid "Executing: $rest"
-#~ msgstr "Führe aus: $rest"
-
-#~ msgid "Execution failed: $rest"
-#~ msgstr "Ausführung fehlgeschlagen: $rest"
-
-#~ msgid "and made changes to the index and/or the working tree"
-#~ msgstr "Der Index und/oder das Arbeitsverzeichnis wurde geändert."
-
-#~ msgid ""
-#~ "You can fix the problem, and then run\n"
-#~ "\n"
-#~ "\tgit rebase --continue"
-#~ msgstr ""
-#~ "Sie können das Problem beheben, und dann\n"
-#~ "\n"
-#~ "\tgit rebase --continue\n"
-#~ "\n"
-#~ "ausführen."
-
-#~ msgid ""
-#~ "Execution succeeded: $rest\n"
-#~ "but left changes to the index and/or the working tree\n"
-#~ "Commit or stash your changes, and then run\n"
-#~ "\n"
-#~ "\tgit rebase --continue"
-#~ msgstr ""
-#~ "Ausführung erfolgreich: $rest\n"
-#~ "Aber Änderungen in Index oder Arbeitsverzeichnis verblieben.\n"
-#~ "Committen Sie Ihre Änderungen oder benutzen Sie \"stash\".\n"
-#~ "Führen Sie dann aus:\n"
-#~ "\n"
-#~ "\tgit rebase --continue"
-
-#~ msgid "Unknown command: $command $sha1 $rest"
-#~ msgstr "Unbekannter Befehl: $command $sha1 $rest"
-
-#~ msgid "Please fix this using 'git rebase --edit-todo'."
-#~ msgstr ""
-#~ "Bitte beheben Sie das, indem Sie 'git rebase --edit-todo' ausführen."
-
-#~ msgid "Successfully rebased and updated $head_name."
-#~ msgstr "Erfolgreich Rebase ausgeführt und $head_name aktualisiert."
-
-#~ msgid "Could not remove CHERRY_PICK_HEAD"
-#~ msgstr "Konnte CHERRY_PICK_HEAD nicht löschen"
-
-#~ msgid ""
-#~ "You have staged changes in your working tree.\n"
-#~ "If these changes are meant to be\n"
-#~ "squashed into the previous commit, run:\n"
-#~ "\n"
-#~ "  git commit --amend $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "If they are meant to go into a new commit, run:\n"
-#~ "\n"
-#~ "  git commit $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "In both cases, once you're done, continue with:\n"
-#~ "\n"
-#~ "  git rebase --continue\n"
-#~ msgstr ""
-#~ "Es befinden sich zum Commit vorgemerkte Änderungen in Ihrem "
-#~ "Arbeitsverzeichnis.\n"
-#~ "Wenn diese Änderungen in den vorherigen Commit aufgenommen werden "
-#~ "sollen,\n"
-#~ "führen Sie aus:\n"
-#~ "\n"
-#~ "  git commit --amend $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "Wenn daraus ein neuer Commit erzeugt werden soll, führen Sie aus:\n"
-#~ "\n"
-#~ "  git commit $gpg_sign_opt_quoted\n"
-#~ "\n"
-#~ "Im Anschluss führen Sie zum Fortfahren aus:\n"
-#~ "\n"
-#~ "  git rebase --continue\n"
-
-#~ msgid "Error trying to find the author identity to amend commit"
-#~ msgstr ""
-#~ "Fehler beim Versuch die Identität des Authors zum Verbessern des Commits "
-#~ "zu\n"
-#~ "finden"
-
-#~ msgid ""
-#~ "You have uncommitted changes in your working tree. Please commit them\n"
-#~ "first and then run 'git rebase --continue' again."
-#~ msgstr ""
-#~ "Sie haben nicht committete Änderungen in Ihrem Arbeitsverzeichnis. Bitte\n"
-#~ "committen Sie diese zuerst und führen Sie dann 'git rebase --continue' "
-#~ "erneut\n"
-#~ "aus."
-
-#~ msgid "Could not commit staged changes."
-#~ msgstr "Konnte Änderungen aus der Staging-Area nicht committen."
-
-#~ msgid "Could not execute editor"
-#~ msgstr "Konnte Editor nicht ausführen."
-
-#~ msgid "Could not checkout $switch_to"
-#~ msgstr "Konnte $switch_to nicht auschecken."
-
-#~ msgid "No HEAD?"
-#~ msgstr "Kein HEAD?"
-
-#~ msgid "Could not create temporary $state_dir"
-#~ msgstr "Konnte temporäres Verzeichnis $state_dir nicht erstellen."
-
-#~ msgid "Could not mark as interactive"
-#~ msgstr "Konnte nicht als interaktiven Rebase markieren."
-
-#~ msgid "Rebase $shortrevisions onto $shortonto ($todocount command)"
-#~ msgid_plural "Rebase $shortrevisions onto $shortonto ($todocount commands)"
-#~ msgstr[0] "Rebase von $shortrevisions auf $shortonto ($todocount Kommando)"
-#~ msgstr[1] "Rebase von $shortrevisions auf $shortonto ($todocount Kommandos)"
-
-#~ msgid "Note that empty commits are commented out"
-#~ msgstr "Leere Commits sind auskommentiert."
-
-#~ msgid "Could not init rewritten commits"
-#~ msgstr "Konnte neu geschriebene Commits nicht initialisieren."
-
-#~ msgid "Cannot rebase: You have unstaged changes."
-#~ msgstr ""
-#~ "Rebase nicht möglich: Sie haben Änderungen, die nicht zum Commit "
-#~ "vorgemerkt sind."
-
-#~ msgid "Cannot pull with rebase: You have unstaged changes."
-#~ msgstr ""
-#~ "Kann \"pull\" mit \"rebase\" nicht ausführen: Sie haben Änderungen, die "
-#~ "nicht zum Commit vorgemerkt sind."
-
-#~ msgid "Cannot rebase: Your index contains uncommitted changes."
-#~ msgstr ""
-#~ "Rebase nicht möglich: Die Staging-Area beinhaltet nicht committete "
-#~ "Änderungen."
-
-#~ msgid "Cannot pull with rebase: Your index contains uncommitted changes."
-#~ msgstr ""
-#~ "Kann \"pull\" mit \"rebase\" nicht ausführen: Die Staging-Area beinhaltet "
-#~ "nicht committete Änderungen."
