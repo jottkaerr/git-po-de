@@ -1268,7 +1268,7 @@ msgstr "%s: Patch konnte nicht angewendet werden"
 #: apply.c:4042
 #, c-format
 msgid "Checking patch %s..."
-msgstr "Prüfe Patch %s ..."
+msgstr "Prüfe Patch %s..."
 
 #: apply.c:4134
 #, c-format
@@ -10950,7 +10950,7 @@ msgstr ""
 msgid "Using index info to reconstruct a base tree..."
 msgstr ""
 "Verwende Informationen aus der Staging-Area, um ein Basisverzeichnis "
-"nachzustellen ..."
+"nachzustellen..."
 
 #: builtin/am.c:1560
 msgid ""
@@ -10962,7 +10962,7 @@ msgstr ""
 
 #: builtin/am.c:1566
 msgid "Falling back to patching base and 3-way merge..."
-msgstr "Falle zurück zum Patchen der Basis und zum 3-Wege-Merge ..."
+msgstr "Falle zurück zum Patchen der Basis und zum 3-Wege-Merge..."
 
 #: builtin/am.c:1592
 msgid "Failed to merge in the changes."
@@ -11325,7 +11325,7 @@ msgstr "git bisect--helper --bisect-visualize"
 
 #: builtin/bisect--helper.c:34
 msgid "git bisect--helper --bisect-run <cmd>..."
-msgstr "git bisect--helper --bisect-run <Programm>"
+msgstr "git bisect--helper --bisect-run <Programm>..."
 
 #: builtin/bisect--helper.c:109
 #, c-format
@@ -13676,7 +13676,7 @@ msgstr "Klone in Bare-Repository '%s' ...\n"
 #: builtin/clone.c:996
 #, c-format
 msgid "Cloning into '%s'...\n"
-msgstr "Klone nach '%s' ...\n"
+msgstr "Klone nach '%s'...\n"
 
 #: builtin/clone.c:1025
 msgid ""
@@ -18640,12 +18640,12 @@ msgstr "Nein.\n"
 #: builtin/merge.c:1664 builtin/merge.c:1730
 #, c-format
 msgid "Rewinding the tree to pristine...\n"
-msgstr "Rücklauf des Verzeichnisses bis zum Ursprung ...\n"
+msgstr "Rücklauf des Verzeichnisses bis zum Ursprung...\n"
 
 #: builtin/merge.c:1668
 #, c-format
 msgid "Trying merge strategy %s...\n"
-msgstr "Probiere Merge-Strategie %s ...\n"
+msgstr "Probiere Merge-Strategie %s...\n"
 
 #: builtin/merge.c:1720
 #, c-format
@@ -26660,7 +26660,7 @@ msgid ""
 msgstr ""
 "Datei '%s' existiert, aber es könnte auch der Bereich von Commits sein,\n"
 "für den Patches erzeugt werden sollen. Bitte machen Sie dies eindeutig\n"
-"indem Sie ...\n"
+"indem Sie...\n"
 "\n"
 "    * \"./%s\" angeben, wenn Sie eine Datei meinen, oder\n"
 "    * die Option --format-patch angeben, wenn Sie einen Commit-Bereich "
