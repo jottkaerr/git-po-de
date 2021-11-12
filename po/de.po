@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2021-11-04 08:34+0800\n"
+"POT-Creation-Date: 2021-11-10 08:55+0800\n"
 "PO-Revision-Date: 2021-11-07 19:48+0100\n"
 "Last-Translator: Matthias Rüster <matthias.ruester@gmail.com>\n"
 "Language-Team: Matthias Rüster <matthias.ruester@gmail.com>\n"
@@ -212,7 +212,7 @@ msgstr "aus Staging-Area entfernt"
 
 #: add-interactive.c:1148 apply.c:5016 apply.c:5019 builtin/am.c:2311
 #: builtin/am.c:2314 builtin/bugreport.c:107 builtin/clone.c:128
-#: builtin/fetch.c:152 builtin/merge.c:286 builtin/pull.c:190
+#: builtin/fetch.c:152 builtin/merge.c:286 builtin/pull.c:194
 #: builtin/submodule--helper.c:404 builtin/submodule--helper.c:1857
 #: builtin/submodule--helper.c:1860 builtin/submodule--helper.c:2503
 #: builtin/submodule--helper.c:2506 builtin/submodule--helper.c:2573
@@ -10663,7 +10663,7 @@ msgstr ""
 "ignoriert:\n"
 
 #: builtin/add.c:371 builtin/clean.c:901 builtin/fetch.c:173 builtin/mv.c:124
-#: builtin/prune-packed.c:14 builtin/pull.c:204 builtin/push.c:550
+#: builtin/prune-packed.c:14 builtin/pull.c:208 builtin/push.c:550
 #: builtin/remote.c:1429 builtin/rm.c:244 builtin/send-pack.c:194
 msgid "dry run"
 msgstr "Probelauf"
@@ -11145,11 +11145,11 @@ msgstr "an git-apply übergeben"
 
 #: builtin/am.c:2317 builtin/commit.c:1514 builtin/fmt-merge-msg.c:17
 #: builtin/fmt-merge-msg.c:20 builtin/grep.c:919 builtin/merge.c:262
-#: builtin/pull.c:141 builtin/pull.c:200 builtin/pull.c:217
+#: builtin/pull.c:142 builtin/pull.c:204 builtin/pull.c:221
 #: builtin/rebase.c:1046 builtin/repack.c:651 builtin/repack.c:655
 #: builtin/repack.c:657 builtin/show-branch.c:649 builtin/show-ref.c:172
 #: builtin/tag.c:445 parse-options.h:154 parse-options.h:175
-#: parse-options.h:316
+#: parse-options.h:315
 msgid "n"
 msgstr "Anzahl"
 
@@ -11201,7 +11201,7 @@ msgid "use current timestamp for author date"
 msgstr "aktuellen Zeitstempel als Autor-Datum verwenden"
 
 #: builtin/am.c:2357 builtin/commit-tree.c:118 builtin/commit.c:1642
-#: builtin/merge.c:299 builtin/pull.c:175 builtin/rebase.c:1099
+#: builtin/merge.c:299 builtin/pull.c:179 builtin/rebase.c:1099
 #: builtin/revert.c:117 builtin/tag.c:460
 msgid "key-id"
 msgstr "GPG-Schlüsselkennung"
@@ -11708,7 +11708,7 @@ msgstr "Statistiken zum Arbeitsaufwand anzeigen"
 #: builtin/commit-graph.c:75 builtin/commit-graph.c:228 builtin/fetch.c:179
 #: builtin/merge.c:298 builtin/multi-pack-index.c:103
 #: builtin/multi-pack-index.c:154 builtin/multi-pack-index.c:178
-#: builtin/multi-pack-index.c:204 builtin/pull.c:119 builtin/push.c:566
+#: builtin/multi-pack-index.c:204 builtin/pull.c:120 builtin/push.c:566
 #: builtin/send-pack.c:202
 msgid "force progress reporting"
 msgstr "Fortschrittsanzeige erzwingen"
@@ -13014,7 +13014,7 @@ msgstr "Branch- oder Commit-Argument fehlt"
 msgid "perform a 3-way merge with the new branch"
 msgstr "einen 3-Wege-Merge mit dem neuen Branch ausführen"
 
-#: builtin/checkout.c:1519 builtin/log.c:1810 parse-options.h:322
+#: builtin/checkout.c:1519 builtin/log.c:1810 parse-options.h:321
 msgid "style"
 msgstr "Stil"
 
@@ -13442,7 +13442,7 @@ msgid "path to git-upload-pack on the remote"
 msgstr "Pfad zu \"git-upload-pack\" auf der Gegenseite"
 
 #: builtin/clone.c:130 builtin/fetch.c:180 builtin/grep.c:876
-#: builtin/pull.c:208
+#: builtin/pull.c:212
 msgid "depth"
 msgstr "Tiefe"
 
@@ -13452,7 +13452,7 @@ msgstr ""
 "einen Klon mit unvollständiger Historie (shallow) in dieser Tiefe erstellen"
 
 #: builtin/clone.c:132 builtin/fetch.c:182 builtin/pack-objects.c:3933
-#: builtin/pull.c:211
+#: builtin/pull.c:215
 msgid "time"
 msgstr "Zeit"
 
@@ -13464,11 +13464,11 @@ msgstr ""
 "erstellen"
 
 #: builtin/clone.c:134 builtin/fetch.c:184 builtin/fetch.c:207
-#: builtin/pull.c:214 builtin/pull.c:239 builtin/rebase.c:1022
+#: builtin/pull.c:218 builtin/pull.c:243 builtin/rebase.c:1022
 msgid "revision"
 msgstr "Commit"
 
-#: builtin/clone.c:135 builtin/fetch.c:185 builtin/pull.c:215
+#: builtin/clone.c:135 builtin/fetch.c:185 builtin/pull.c:219
 msgid "deepen history of shallow clone, excluding rev"
 msgstr ""
 "die Historie eines Klons mit unvollständiger Historie (shallow) mittels\n"
@@ -13504,21 +13504,21 @@ msgid "set config inside the new repository"
 msgstr "Konfiguration innerhalb des neuen Repositories setzen"
 
 #: builtin/clone.c:147 builtin/fetch.c:202 builtin/ls-remote.c:77
-#: builtin/pull.c:230 builtin/push.c:575 builtin/send-pack.c:200
+#: builtin/pull.c:234 builtin/push.c:575 builtin/send-pack.c:200
 msgid "server-specific"
 msgstr "serverspezifisch"
 
 #: builtin/clone.c:147 builtin/fetch.c:202 builtin/ls-remote.c:77
-#: builtin/pull.c:231 builtin/push.c:575 builtin/send-pack.c:201
+#: builtin/pull.c:235 builtin/push.c:575 builtin/send-pack.c:201
 msgid "option to transmit"
 msgstr "Option übertragen"
 
-#: builtin/clone.c:148 builtin/fetch.c:203 builtin/pull.c:234
+#: builtin/clone.c:148 builtin/fetch.c:203 builtin/pull.c:238
 #: builtin/push.c:576
 msgid "use IPv4 addresses only"
 msgstr "nur IPv4-Adressen benutzen"
 
-#: builtin/clone.c:150 builtin/fetch.c:205 builtin/pull.c:237
+#: builtin/clone.c:150 builtin/fetch.c:205 builtin/pull.c:241
 #: builtin/push.c:578
 msgid "use IPv6 addresses only"
 msgstr "nur IPv6-Adressen benutzen"
@@ -13930,7 +13930,7 @@ msgid "read commit log message from file"
 msgstr "Commit-Beschreibung von Datei lesen"
 
 #: builtin/commit-tree.c:119 builtin/commit.c:1643 builtin/merge.c:300
-#: builtin/pull.c:176 builtin/revert.c:118
+#: builtin/pull.c:180 builtin/revert.c:118
 msgid "GPG sign commit"
 msgstr "Commit mit GPG signieren"
 
@@ -14351,7 +14351,7 @@ msgstr "Einträge mit NUL-Zeichen abschließen"
 
 #: builtin/commit.c:1501 builtin/commit.c:1505 builtin/commit.c:1668
 #: builtin/fast-export.c:1199 builtin/fast-export.c:1202
-#: builtin/fast-export.c:1205 builtin/rebase.c:1111 parse-options.h:336
+#: builtin/fast-export.c:1205 builtin/rebase.c:1111 parse-options.h:335
 msgid "mode"
 msgstr "Modus"
 
@@ -14431,7 +14431,7 @@ msgid "override date for commit"
 msgstr "Datum eines Commits überschreiben"
 
 #: builtin/commit.c:1627 builtin/commit.c:1628 builtin/commit.c:1634
-#: parse-options.h:328 ref-filter.h:92
+#: parse-options.h:327 ref-filter.h:92
 msgid "commit"
 msgstr "Commit"
 
@@ -14476,7 +14476,7 @@ msgid "add custom trailer(s)"
 msgstr "benutzerdefinierte Anhänge hinzufügen"
 
 #: builtin/commit.c:1637 builtin/log.c:1754 builtin/merge.c:303
-#: builtin/pull.c:145 builtin/revert.c:110
+#: builtin/pull.c:146 builtin/revert.c:110
 msgid "add a Signed-off-by trailer"
 msgstr "eine Signed-off-by Zeile hinzufügen"
 
@@ -15472,15 +15472,15 @@ msgstr "git fetch --all [<Optionen>]"
 msgid "fetch.parallel cannot be negative"
 msgstr "fetch.parallel kann nicht negativ sein"
 
-#: builtin/fetch.c:145 builtin/pull.c:185
+#: builtin/fetch.c:145 builtin/pull.c:189
 msgid "fetch from all remotes"
 msgstr "fordert von allen Remote-Repositories an"
 
-#: builtin/fetch.c:147 builtin/pull.c:245
+#: builtin/fetch.c:147 builtin/pull.c:249
 msgid "set upstream for git pull/fetch"
 msgstr "Upstream für \"git pull/fetch\" setzen"
 
-#: builtin/fetch.c:149 builtin/pull.c:188
+#: builtin/fetch.c:149 builtin/pull.c:192
 msgid "append to .git/FETCH_HEAD instead of overwriting"
 msgstr "an .git/FETCH_HEAD anhängen statt zu überschreiben"
 
@@ -15488,7 +15488,7 @@ msgstr "an .git/FETCH_HEAD anhängen statt zu überschreiben"
 msgid "use atomic transaction to update references"
 msgstr "atomare Transaktionen nutzen, um Referenzen zu aktualisieren"
 
-#: builtin/fetch.c:153 builtin/pull.c:191
+#: builtin/fetch.c:153 builtin/pull.c:195
 msgid "path to upload pack on remote end"
 msgstr "Pfad des Programms zum Hochladen von Paketen auf der Gegenseite"
 
@@ -15500,7 +15500,7 @@ msgstr "das Überschreiben einer lokalen Referenz erzwingen"
 msgid "fetch from multiple remotes"
 msgstr "von mehreren Remote-Repositories anfordern"
 
-#: builtin/fetch.c:158 builtin/pull.c:195
+#: builtin/fetch.c:158 builtin/pull.c:199
 msgid "fetch all tags and associated objects"
 msgstr "alle Tags und verbundene Objekte anfordern"
 
@@ -15518,7 +15518,7 @@ msgstr ""
 "Refspec verändern, damit alle Referenzen unter refs/prefetch/ platziert "
 "werden"
 
-#: builtin/fetch.c:166 builtin/pull.c:198
+#: builtin/fetch.c:166 builtin/pull.c:202
 msgid "prune remote-tracking branches no longer on remote"
 msgstr ""
 "Remote-Tracking-Branches entfernen, die sich nicht mehr im Remote-Repository "
@@ -15530,7 +15530,7 @@ msgstr ""
 "lokale Tags entfernen, die sich nicht mehr im Remote-Repository befinden, "
 "und geänderte Tags aktualisieren"
 
-#: builtin/fetch.c:169 builtin/fetch.c:194 builtin/pull.c:122
+#: builtin/fetch.c:169 builtin/fetch.c:194 builtin/pull.c:123
 msgid "on-demand"
 msgstr "bei-Bedarf"
 
@@ -15542,7 +15542,7 @@ msgstr "rekursive Anforderungen von Submodulen kontrollieren"
 msgid "write fetched references to the FETCH_HEAD file"
 msgstr "schreibe angeforderte Referenzen in die FETCH_HEAD-Datei"
 
-#: builtin/fetch.c:176 builtin/pull.c:206
+#: builtin/fetch.c:176 builtin/pull.c:210
 msgid "keep downloaded pack"
 msgstr "heruntergeladenes Paket behalten"
 
@@ -15550,20 +15550,20 @@ msgstr "heruntergeladenes Paket behalten"
 msgid "allow updating of HEAD ref"
 msgstr "Aktualisierung der \"HEAD\"-Referenz erlauben"
 
-#: builtin/fetch.c:181 builtin/fetch.c:187 builtin/pull.c:209
-#: builtin/pull.c:218
+#: builtin/fetch.c:181 builtin/fetch.c:187 builtin/pull.c:213
+#: builtin/pull.c:222
 msgid "deepen history of shallow clone"
 msgstr ""
 "die Historie eines Klons mit unvollständiger Historie (shallow) vertiefen"
 
-#: builtin/fetch.c:183 builtin/pull.c:212
+#: builtin/fetch.c:183 builtin/pull.c:216
 msgid "deepen history of shallow repository based on time"
 msgstr ""
 "die Historie eines Klons mit unvollständiger Historie (shallow) auf "
 "Zeitbasis\n"
 "vertiefen"
 
-#: builtin/fetch.c:189 builtin/pull.c:221
+#: builtin/fetch.c:189 builtin/pull.c:225
 msgid "convert to a complete repository"
 msgstr "zu einem vollständigen Repository konvertieren"
 
@@ -15579,19 +15579,19 @@ msgstr ""
 "Standard für die rekursive Anforderung von Submodulen (geringere Priorität\n"
 "als Konfigurationsdateien)"
 
-#: builtin/fetch.c:199 builtin/pull.c:224
+#: builtin/fetch.c:199 builtin/pull.c:228
 msgid "accept refs that update .git/shallow"
 msgstr "Referenzen, die .git/shallow aktualisieren, akzeptieren"
 
-#: builtin/fetch.c:200 builtin/pull.c:226
+#: builtin/fetch.c:200 builtin/pull.c:230
 msgid "refmap"
 msgstr "Refmap"
 
-#: builtin/fetch.c:201 builtin/pull.c:227
+#: builtin/fetch.c:201 builtin/pull.c:231
 msgid "specify fetch refmap"
 msgstr "Refmap für 'fetch' angeben"
 
-#: builtin/fetch.c:208 builtin/pull.c:240
+#: builtin/fetch.c:208 builtin/pull.c:244
 msgid "report that we have only objects reachable from this object"
 msgstr ""
 "ausgeben, dass wir nur Objekte haben, die von diesem Objekt aus erreichbar "
@@ -15607,7 +15607,7 @@ msgstr ""
 msgid "run 'maintenance --auto' after fetching"
 msgstr "führe 'maintenance --auto' nach \"fetch\" aus"
 
-#: builtin/fetch.c:217 builtin/pull.c:243
+#: builtin/fetch.c:217 builtin/pull.c:247
 msgid "check for forced-updates on all updated branches"
 msgstr "Prüfe auf erzwungene Aktualisierungen in allen aktualisierten Branches"
 
@@ -18323,33 +18323,33 @@ msgstr "Verfügbare Strategien sind:"
 msgid "Available custom strategies are:"
 msgstr "Verfügbare benutzerdefinierte Strategien sind:"
 
-#: builtin/merge.c:257 builtin/pull.c:133
+#: builtin/merge.c:257 builtin/pull.c:134
 msgid "do not show a diffstat at the end of the merge"
 msgstr "keine Zusammenfassung der Unterschiede am Schluss des Merges anzeigen"
 
-#: builtin/merge.c:260 builtin/pull.c:136
+#: builtin/merge.c:260 builtin/pull.c:137
 msgid "show a diffstat at the end of the merge"
 msgstr "eine Zusammenfassung der Unterschiede am Schluss des Merges anzeigen"
 
-#: builtin/merge.c:261 builtin/pull.c:139
+#: builtin/merge.c:261 builtin/pull.c:140
 msgid "(synonym to --stat)"
 msgstr "(Synonym für --stat)"
 
-#: builtin/merge.c:263 builtin/pull.c:142
+#: builtin/merge.c:263 builtin/pull.c:143
 msgid "add (at most <n>) entries from shortlog to merge commit message"
 msgstr ""
 "(höchstens <n>) Einträge von \"shortlog\" zur Beschreibung des Merge-Commits "
 "hinzufügen"
 
-#: builtin/merge.c:266 builtin/pull.c:148
+#: builtin/merge.c:266 builtin/pull.c:149
 msgid "create a single commit instead of doing a merge"
 msgstr "einen einzelnen Commit erzeugen statt einen Merge durchzuführen"
 
-#: builtin/merge.c:268 builtin/pull.c:151
+#: builtin/merge.c:268 builtin/pull.c:152
 msgid "perform a commit if the merge succeeds (default)"
 msgstr "einen Commit durchführen, wenn der Merge erfolgreich war (Standard)"
 
-#: builtin/merge.c:270 builtin/pull.c:154
+#: builtin/merge.c:270 builtin/pull.c:155
 msgid "edit message before committing"
 msgstr "Bearbeitung der Beschreibung vor dem Commit"
 
@@ -18357,28 +18357,28 @@ msgstr "Bearbeitung der Beschreibung vor dem Commit"
 msgid "allow fast-forward (default)"
 msgstr "Vorspulen erlauben (Standard)"
 
-#: builtin/merge.c:274 builtin/pull.c:161
+#: builtin/merge.c:274 builtin/pull.c:162
 msgid "abort if fast-forward is not possible"
 msgstr "abbrechen, wenn kein Vorspulen möglich ist"
 
-#: builtin/merge.c:278 builtin/pull.c:164
+#: builtin/merge.c:278 builtin/pull.c:168
 msgid "verify that the named commit has a valid GPG signature"
 msgstr "den genannten Commit auf eine gültige GPG-Signatur überprüfen"
 
-#: builtin/merge.c:279 builtin/notes.c:785 builtin/pull.c:168
+#: builtin/merge.c:279 builtin/notes.c:785 builtin/pull.c:172
 #: builtin/rebase.c:1117 builtin/revert.c:114
 msgid "strategy"
 msgstr "Strategie"
 
-#: builtin/merge.c:280 builtin/pull.c:169
+#: builtin/merge.c:280 builtin/pull.c:173
 msgid "merge strategy to use"
 msgstr "zu verwendende Merge-Strategie"
 
-#: builtin/merge.c:281 builtin/pull.c:172
+#: builtin/merge.c:281 builtin/pull.c:176
 msgid "option=value"
 msgstr "Option=Wert"
 
-#: builtin/merge.c:282 builtin/pull.c:173
+#: builtin/merge.c:282 builtin/pull.c:177
 msgid "option for selected merge strategy"
 msgstr "Option für ausgewählte Merge-Strategie"
 
@@ -18399,7 +18399,7 @@ msgstr "--abort, aber Index und Arbeitsverzeichnis unverändert lassen"
 msgid "continue the current in-progress merge"
 msgstr "den sich im Gange befindlichen Merge fortsetzen"
 
-#: builtin/merge.c:297 builtin/pull.c:180
+#: builtin/merge.c:297 builtin/pull.c:184
 msgid "allow merging unrelated histories"
 msgstr "erlaube das Zusammenführen von nicht zusammenhängenden Historien"
 
@@ -19851,44 +19851,49 @@ msgstr "Ungültiger Wert für %s: %s"
 msgid "git pull [<options>] [<repository> [<refspec>...]]"
 msgstr "git pull [<Optionen>] [<Repository> [<Refspec>...]]"
 
-#: builtin/pull.c:123
+#: builtin/pull.c:124
 msgid "control for recursive fetching of submodules"
 msgstr "rekursive Anforderungen von Submodulen kontrollieren"
 
-#: builtin/pull.c:127
+#: builtin/pull.c:128
 msgid "Options related to merging"
 msgstr "Optionen bezogen auf Merge"
 
-#: builtin/pull.c:130
+#: builtin/pull.c:131
 msgid "incorporate changes by rebasing rather than merging"
 msgstr "Integration von Änderungen durch Rebase statt Merge"
 
-#: builtin/pull.c:158 builtin/revert.c:126
+#: builtin/pull.c:159 builtin/revert.c:126
 msgid "allow fast-forward"
 msgstr "Vorspulen erlauben"
 
-#: builtin/pull.c:167 parse-options.h:339
+#: builtin/pull.c:165
+#, fuzzy
+msgid "control use of pre-merge-commit and commit-msg hooks"
+msgstr "Hooks pre-merge-commit und commit-msg umgehen"
+
+#: builtin/pull.c:171 parse-options.h:338
 msgid "automatically stash/stash pop before and after"
 msgstr "automatischer Stash/Stash-Pop davor und danach"
 
-#: builtin/pull.c:183
+#: builtin/pull.c:187
 msgid "Options related to fetching"
 msgstr "Optionen bezogen auf Fetch"
 
-#: builtin/pull.c:193
+#: builtin/pull.c:197
 msgid "force overwrite of local branch"
 msgstr "das Überschreiben von lokalen Branches erzwingen"
 
-#: builtin/pull.c:201
+#: builtin/pull.c:205
 msgid "number of submodules pulled in parallel"
 msgstr "Anzahl der parallel mit 'pull' zu verarbeitenden Submodule"
 
-#: builtin/pull.c:317
+#: builtin/pull.c:321
 #, c-format
 msgid "Invalid value for pull.ff: %s"
 msgstr "Ungültiger Wert für pull.ff: %s"
 
-#: builtin/pull.c:445
+#: builtin/pull.c:449
 msgid ""
 "There is no candidate for rebasing against among the refs that you just "
 "fetched."
@@ -19896,14 +19901,14 @@ msgstr ""
 "Es gibt keinen Kandidaten für Rebase innerhalb der Referenzen, die eben "
 "angefordert wurden."
 
-#: builtin/pull.c:447
+#: builtin/pull.c:451
 msgid ""
 "There are no candidates for merging among the refs that you just fetched."
 msgstr ""
 "Es gibt keine Kandidaten für Merge innerhalb der Referenzen, die eben "
 "angefordert wurden."
 
-#: builtin/pull.c:448
+#: builtin/pull.c:452
 msgid ""
 "Generally this means that you provided a wildcard refspec which had no\n"
 "matches on the remote end."
@@ -19911,7 +19916,7 @@ msgstr ""
 "Im Allgemeinen bedeutet das, dass Sie einen Refspec mit Wildcards angegeben\n"
 "haben, der auf der Gegenseite mit keinen Referenzen übereinstimmt."
 
-#: builtin/pull.c:451
+#: builtin/pull.c:455
 #, c-format
 msgid ""
 "You asked to pull from the remote '%s', but did not specify\n"
@@ -19923,38 +19928,38 @@ msgstr ""
 "Repository für den aktuellen Branch ist, müssen Sie einen Branch auf\n"
 "der Befehlszeile angeben."
 
-#: builtin/pull.c:456 builtin/rebase.c:951
+#: builtin/pull.c:460 builtin/rebase.c:951
 msgid "You are not currently on a branch."
 msgstr "Im Moment auf keinem Branch."
 
-#: builtin/pull.c:458 builtin/pull.c:473
+#: builtin/pull.c:462 builtin/pull.c:477
 msgid "Please specify which branch you want to rebase against."
 msgstr ""
 "Bitte geben Sie den Branch an, gegen welchen Sie \"rebase\" ausführen "
 "möchten."
 
-#: builtin/pull.c:460 builtin/pull.c:475
+#: builtin/pull.c:464 builtin/pull.c:479
 msgid "Please specify which branch you want to merge with."
 msgstr "Bitte geben Sie den Branch an, welchen Sie zusammenführen möchten."
 
-#: builtin/pull.c:461 builtin/pull.c:476
+#: builtin/pull.c:465 builtin/pull.c:480
 msgid "See git-pull(1) for details."
 msgstr "Siehe git-pull(1) für weitere Details."
 
-#: builtin/pull.c:463 builtin/pull.c:469 builtin/pull.c:478
+#: builtin/pull.c:467 builtin/pull.c:473 builtin/pull.c:482
 #: builtin/rebase.c:957
 msgid "<remote>"
 msgstr "<Remote-Repository>"
 
-#: builtin/pull.c:463 builtin/pull.c:478 builtin/pull.c:483
+#: builtin/pull.c:467 builtin/pull.c:482 builtin/pull.c:487
 msgid "<branch>"
 msgstr "<Branch>"
 
-#: builtin/pull.c:471 builtin/rebase.c:949
+#: builtin/pull.c:475 builtin/rebase.c:949
 msgid "There is no tracking information for the current branch."
 msgstr "Es gibt keine Tracking-Informationen für den aktuellen Branch."
 
-#: builtin/pull.c:480
+#: builtin/pull.c:484
 msgid ""
 "If you wish to set tracking information for this branch you can do so with:"
 msgstr ""
@@ -19962,7 +19967,7 @@ msgstr ""
 "Sie\n"
 "dies tun mit:"
 
-#: builtin/pull.c:485
+#: builtin/pull.c:489
 #, c-format
 msgid ""
 "Your configuration specifies to merge with the ref '%s'\n"
@@ -19972,16 +19977,16 @@ msgstr ""
 "des Remote-Repositories durchzuführen, aber diese Referenz\n"
 "wurde nicht angefordert."
 
-#: builtin/pull.c:596
+#: builtin/pull.c:600
 #, c-format
 msgid "unable to access commit %s"
 msgstr "Konnte nicht auf Commit '%s' zugreifen."
 
-#: builtin/pull.c:902
+#: builtin/pull.c:908
 msgid "ignoring --verify-signatures for rebase"
 msgstr "Ignoriere --verify-signatures für Rebase"
 
-#: builtin/pull.c:936
+#: builtin/pull.c:942
 msgid ""
 "You have divergent branches and need to specify how to reconcile them.\n"
 "You can do so by running one of the following commands sometime before\n"
@@ -20011,21 +20016,21 @@ msgstr ""
 "Option --rebase, --no-rebase oder --ff-only auf der Kommandozeile nutzen,\n"
 "um das konfigurierte Standardverhalten pro Aufruf zu überschreiben.\n"
 
-#: builtin/pull.c:1010
+#: builtin/pull.c:1016
 msgid "Updating an unborn branch with changes added to the index."
 msgstr ""
 "Aktualisiere einen ungeborenen Branch mit Änderungen, die zum Commit "
 "vorgemerkt sind."
 
-#: builtin/pull.c:1014
+#: builtin/pull.c:1020
 msgid "pull with rebase"
 msgstr "Pull mit Rebase"
 
-#: builtin/pull.c:1015
+#: builtin/pull.c:1021
 msgid "please commit or stash them."
 msgstr "Bitte committen Sie die Änderungen oder benutzen Sie \"stash\"."
 
-#: builtin/pull.c:1040
+#: builtin/pull.c:1046
 #, c-format
 msgid ""
 "fetch updated the current branch head.\n"
@@ -20035,7 +20040,7 @@ msgstr ""
 "\"fetch\" aktualisierte die Spitze des aktuellen Branches.\n"
 "Spule Ihr Arbeitsverzeichnis von Commit %s vor."
 
-#: builtin/pull.c:1046
+#: builtin/pull.c:1052
 #, c-format
 msgid ""
 "Cannot fast-forward your working tree.\n"
@@ -20052,25 +20057,25 @@ msgstr ""
 "$ git reset --hard\n"
 "zur Wiederherstellung aus."
 
-#: builtin/pull.c:1061
+#: builtin/pull.c:1067
 msgid "Cannot merge multiple branches into empty head."
 msgstr "Kann nicht mehrere Branches in einen leeren Branch zusammenführen."
 
-#: builtin/pull.c:1066
+#: builtin/pull.c:1072
 msgid "Cannot rebase onto multiple branches."
 msgstr "Kann Rebase nicht auf mehrere Branches ausführen."
 
-#: builtin/pull.c:1068
+#: builtin/pull.c:1074
 msgid "Cannot fast-forward to multiple branches."
 msgstr "Kann nicht zu mehreren Branches vorspulen."
 
-#: builtin/pull.c:1082
+#: builtin/pull.c:1088
 msgid "Need to specify how to reconcile divergent branches."
 msgstr ""
 "Es muss angegeben werden, wie mit abweichenden Branches umgegangen werden "
 "sollen."
 
-#: builtin/pull.c:1096
+#: builtin/pull.c:1102
 msgid "cannot rebase with locally recorded submodule modifications"
 msgstr ""
 "Kann Rebase nicht mit lokal aufgezeichneten Änderungen in Submodulen "
@@ -23668,8 +23673,8 @@ msgid ""
 "Fetched in submodule path '%s', but it did not contain %s. Direct fetching "
 "of that commit failed."
 msgstr ""
-"\"fetch\" in Submodul-Pfad '%s' ausgeführt, aber enthielt nicht %s. "
-"Direktes Anfordern dieses Commits ist fehlgeschlagen."
+"\"fetch\" in Submodul-Pfad '%s' ausgeführt, aber enthielt nicht %s. Direktes "
+"Anfordern dieses Commits ist fehlgeschlagen."
 
 #: builtin/submodule--helper.c:2504 builtin/submodule--helper.c:2574
 #: builtin/submodule--helper.c:2812
@@ -25346,28 +25351,28 @@ msgstr "Verfallsdatum"
 msgid "no-op (backward compatibility)"
 msgstr "Kein Effekt (Rückwärtskompatibilität)"
 
-#: parse-options.h:309
+#: parse-options.h:308
 msgid "be more verbose"
 msgstr "erweiterte Ausgaben"
 
-#: parse-options.h:311
+#: parse-options.h:310
 msgid "be more quiet"
 msgstr "weniger Ausgaben"
 
-#: parse-options.h:317
+#: parse-options.h:316
 msgid "use <n> digits to display object names"
 msgstr "benutze <Anzahl> Ziffern zur Anzeige von Objektnamen"
 
-#: parse-options.h:336
+#: parse-options.h:335
 msgid "how to strip spaces and #comments from message"
 msgstr ""
 "wie Leerzeichen und #Kommentare von der Beschreibung getrennt werden sollen"
 
-#: parse-options.h:337
+#: parse-options.h:336
 msgid "read pathspec from file"
 msgstr "Pfadspezifikation aus einer Datei lesen"
 
-#: parse-options.h:338
+#: parse-options.h:337
 msgid ""
 "with --pathspec-from-file, pathspec elements are separated with NUL character"
 msgstr ""
