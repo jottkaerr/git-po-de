@@ -7099,7 +7099,7 @@ msgstr "Format: %%(else) Atom ohne ein %%(then) Atom verwendet"
 #: ref-filter.c:950
 #, c-format
 msgid "format: %%(else) atom used more than once"
-msgstr "Format: %%(end) Atom mehr als einmal verwendet"
+msgstr "Format: %%(else) Atom mehr als einmal verwendet"
 
 #: ref-filter.c:965
 #, c-format
