@@ -4447,7 +4447,7 @@ msgstr "gpg beim Signieren der Daten fehlgeschlagen"
 
 #: gpg-interface.c:895
 msgid "user.signingkey needs to be set for ssh signing"
-msgstr "user.signingkey muss für die SSH-Signatur festgelegt werden"
+msgstr "user.signingkey muss für die SSH-Signatur gesetzt sein"
 
 #: gpg-interface.c:906
 #, c-format
@@ -4621,7 +4621,7 @@ msgstr "Setze fort unter der Annahme, dass Sie '%s' meinten."
 #: help.c:646
 #, c-format
 msgid "Run '%s' instead? (y/N)"
-msgstr "Führen Sie stattdessen '%s' aus? (y/N)"
+msgstr "Stattdessen '%s' ausführen? (y/N)"
 
 #: help.c:654
 #, c-format
@@ -5509,7 +5509,7 @@ msgstr "kann Reverse-Index-Datei nicht speichern"
 #: midx.c:990
 #, c-format
 msgid "could not parse line: %s"
-msgstr "Zeile konnte nicht analysiert werden: %s"
+msgstr "Zeile konnte nicht geparst werden: %s"
 
 #: midx.c:992
 #, c-format
@@ -18766,7 +18766,7 @@ msgstr "schreibe Multipack-Bitmap"
 
 #: builtin/multi-pack-index.c:105
 msgid "write multi-pack index containing only given indexes"
-msgstr "schreibe nur Multipack-Bitmap-Index, die vorgegebene Indexe enthalten"
+msgstr "Multipack-Index schreiben, der nur die gegebenen Indexe enthält"
 
 #: builtin/multi-pack-index.c:107
 msgid "refs snapshot for selecting bitmap commits"
@@ -23628,7 +23628,7 @@ msgstr "Rebase von '%s' in Submodul-Pfad '%s' nicht möglich"
 #: builtin/submodule--helper.c:2380
 #, c-format
 msgid "Unable to merge '%s' in submodule path '%s'"
-msgstr "Merge von '%s' in Submodul-Pfad '%s' fehlgeschlagen"
+msgstr "Merge von '%s' in Submodul-Pfad '%s' nicht möglich"
 
 #: builtin/submodule--helper.c:2384
 #, c-format
@@ -23881,7 +23881,7 @@ msgstr "Reaktiviere lokales Git-Verzeichnis für Submodul '%s'\n"
 #: builtin/submodule--helper.c:3109
 #, c-format
 msgid "unable to checkout submodule '%s'"
-msgstr "Kann Submodul '%s' nicht auschecken"
+msgstr "kann Submodul '%s' nicht auschecken"
 
 #: builtin/submodule--helper.c:3148
 #, c-format
@@ -23897,12 +23897,12 @@ msgstr "Fehler beim Registrieren von Submodul '%s'"
 #: builtin/submodule--helper.c:3221
 #, c-format
 msgid "'%s' already exists in the index"
-msgstr "'%s' ist bereits zum Commit vorgemerkt"
+msgstr "'%s' existiert bereits im Index"
 
 #: builtin/submodule--helper.c:3224
 #, c-format
 msgid "'%s' already exists in the index and is not a submodule"
-msgstr "'%s' ist bereits zum Commit vorgemerkt und ist kein Submodul"
+msgstr "'%s' existiert bereits im Index und ist kein Submodul"
 
 #: builtin/submodule--helper.c:3253
 msgid "branch of repository to add as submodule"
