@@ -19868,9 +19868,8 @@ msgid "allow fast-forward"
 msgstr "Vorspulen erlauben"
 
 #: builtin/pull.c:165
-#, fuzzy
 msgid "control use of pre-merge-commit and commit-msg hooks"
-msgstr "Hooks pre-merge-commit und commit-msg umgehen"
+msgstr "Benutzung der pre-merge-commit und commit-msg Hooks kontrollieren"
 
 #: builtin/pull.c:171 parse-options.h:338
 msgid "automatically stash/stash pop before and after"
